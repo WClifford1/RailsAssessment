@@ -1,0 +1,10 @@
+<h1>Listing#index</h1>
+<p>Find me in app/views/listing/index.html.erb</p>
+
+<%= link_to  "Create new listing", new_listing_path, :class => 'btn btn-warning' %>
+
+
+
+<% @listing.each do |listing| %>
+    <%= listing.title %>
+<% end %>
