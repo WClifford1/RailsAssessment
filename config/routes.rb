@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'listing/new'
   get 'listing/create'
   get 'listing/edit'
-  get 'home/index'
+  get 'listing/index'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "listing#index"
