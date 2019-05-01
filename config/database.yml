@@ -23,7 +23,8 @@ default: &default
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: Password
+  # password: <%= ENV['DB_PASSWORD'] %>
+  password: postgres
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
