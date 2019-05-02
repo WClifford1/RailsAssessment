@@ -1,4 +1,5 @@
 # README
+<<<<<<< HEAD
 # Two sided marketplace:
 # 
 We have created an app which will be using Ruby on Rails which is connected to a Postgresql database
@@ -39,6 +40,18 @@ PG:
 At this moment in time we are using Heroku to deploy the application to the internet
 #-------------------#
 #Link to pusblished app
+=======
+<<<<<<< HEAD
+
+## Hello
+
+=======
+hello mun
+aaaay
+>>>>>>> 6da4fca4f88846d2159ebdde75e8ad3f5c86dd8f
+This README would normally document whatever steps are necessary to get the
+application up and running.
+>>>>>>> 453fdfa312268c6df92bf12595150649e782ed2a
 
 #Link to Github Repo
 #-------------------#
