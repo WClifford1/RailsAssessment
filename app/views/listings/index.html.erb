@@ -4,7 +4,10 @@
 <%= link_to  "Create new listing", new_listing_path, :class => 'btn btn-warning' %>
 
 
-
+<table>
 <% @listing.each do |listing| %>
+<%= listing.user.email %>
     <%= listing.title %>
+     
 <% end %>
+</table>
