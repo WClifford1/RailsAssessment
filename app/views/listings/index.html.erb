@@ -1,10 +1,26 @@
-<h1>Listing#index</h1>
-<p>Find me in app/views/listing/index.html.erb</p>
-
+<div class="list-button">
 <%= link_to  "Create new listing", new_listing_path, :class => 'btn btn-warning' %>
+</div>
+
+<div class="title">
+<h1>Featured Products</h1>
+</div>
 
 
 
-<% @listing.each do |listing| %>
+
+<div class="title">
+
+<h1>Your listings</h1>
+</div>
+
+<div id="listings">
+<% @listings.each do |listing| %>
     <%= listing.title %>
+    <% if listing.image.attached? %>
+        <% for img in listing.image %>
+            <%= image_tag img, style: 'height: 100px' %>
+        <% end %>
+    <% end %>
 <% end %>
+</div>
