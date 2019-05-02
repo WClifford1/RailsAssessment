@@ -13,4 +13,29 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+.user-form {
+    display: flex;
+    // border: 2px red solid;
+    justify-content: center;
+}
+
+.inner-form-container {
+    // border: 2px black solid;
+    justify-content: center;
+    // flex-wrap: wrap;
+}
+
+.back-button {
+    margin: 20px 0 0 0;
+}
+
+.text-new {
+    text-align: center;
+}
+
+body {
+    background-image: image-url('tech.jpg');
+    background-size: cover;
+}
+
+@import "bootstrap";
