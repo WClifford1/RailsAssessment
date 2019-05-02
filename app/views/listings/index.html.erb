@@ -6,21 +6,17 @@
 <h1>Featured Products</h1>
 </div>
 
-
-
-
 <div class="title">
 
 <h1>Your listings</h1>
 </div>
 
-<div id="listings">
+
 <% @listings.each do |listing| %>
     <%= listing.title %>
     <% if listing.image.attached? %>
         <% for img in listing.image %>
-            <%= image_tag img, style: 'height: 100px' %>
+            <%= image_tag img, stlye: 'height: 100px' %>
         <% end %>
     <% end %>
 <% end %>
-</div>
