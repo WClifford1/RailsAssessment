@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   get 'orders/new'
   get 'success', to: "orders#create"
-  
   # get 'orders/show'
   # get 'orders/index'
   # get 'orders/new'
   # get 'orders/destroy'
   # get 'orders/update'
   # get 'orders/create'
+  devise_for :models
   devise_for :users
   get 'home/index'
   # get 'listing/index'
