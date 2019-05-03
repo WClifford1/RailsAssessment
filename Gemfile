@@ -8,6 +8,8 @@ gem 'dotenv-rails', groups: [:test, :development]
 # Cloudinary
 gem 'cloudinary'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
