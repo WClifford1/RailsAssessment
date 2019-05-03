@@ -6,12 +6,13 @@
 <h1>Featured Products</h1>
 </div>
 
-<div class="title">
 
 <h1>Your listings</h1>
 </div>
 
+<div class="title">
 
+<table>
 <% @listings.each do |listing| %>
     <%= listing.title %>
     
@@ -36,4 +37,6 @@
             
         <% end %>
     <% end %>
+    <%= link_to "order this item", new_order_path %>
 <% end %>
+
