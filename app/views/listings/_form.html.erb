@@ -1,46 +1,78 @@
 <%= form_with(model: listing, local: true) do |form| %>
 
     <div class="field">
-        <%= form.label :title %>
-        <%= form.text_field :title %>
+        <div class="form-labels">
+            <%= form.label :title %>
+        </div>
+        <div class="form-box">
+            <%= form.text_field :title %>
+        </div>
     </div>
-
-    <div class="field">
-        <%= form.label :price %>
-        <%= form.text_field :price %>
-    </div>
-
 
 
     <div class="field">
-        <%= form.label :description %>
-        <%= form.text_field :description %>
+        <div class="form-labels">
+            <%= form.label :price %>
+        </div>
+        <div class="form-box">
+            <%= form.text_field :price %>
+        </div>
     </div>
 
     <div class="field">
-        <%= form.label :address %>
-        <%= form.text_field :address %>
+        <div class="form-labels">
+            <%= form.label :description %>
+        </div>
+        <div class="form-box">
+            <%= form.text_field :description %>
+        </div>
     </div>
 
     <div class="field">
-        <%= form.label :city %>
-        <%= form.text_field :city %>
+        <div class="form-labels">
+            <%= form.label :address %>
+        </div>
+        <div class="form-box">
+            <%= form.text_field :address %>
+        </div>
     </div>
 
     <div class="field">
-        <%= form.label :state %>
-        <%= form.text_field :state %>
+        <div class="form-labels">
+            <%= form.label :city %>
+        </div>
+        <div class="form-box">
+            <%= form.text_field :city %>
+        </div>
     </div>
 
     <div class="field">
+        <div class="form-labels">
+            <%= form.label :state %>
+        </div>
+        <div class="form-box">
+            <%= form.text_field :state %>
+        </div>
+    </div>
+
+    <div class="field">
+    <div class="form-labels">
         <%= form.label :country %>
+    </div>
+    <div class="form-box">
         <%= form.text_field :country %>
     </div>
 
-    <div class="field">
-        <%= form.label :image %>
-        <%= form.file_field :image, multiple: true, class: "form-control" %>
     </div>
+
+     <div class="field">
+        <div class="form-labels">
+            <%= form.label :image %>
+        </div>
+        <div class="form-box">
+            <%= form.file_field :image, multiple: true, class: "form-control" %>
+        </div>  
+  </div>
 
     <div class="actions">
         <%= form.submit %>
