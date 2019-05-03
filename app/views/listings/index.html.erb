@@ -15,13 +15,28 @@
 <table>
 <% @listings.each do |listing| %>
     <%= listing.title %>
+    
+    
+    <%= listing.price %>
+    
+    <%= listing.description %>
+    
+    <%= listing.address %>
+    
+    <%= listing.city %>
+   
+    <th><%= listing.state %>
+   
+    <%= listing.country %>
+    
+    
     <% if listing.image.attached? %>
         <% for img in listing.image %>
-
-            <%= image_tag img, style: 'height: 100px' %>
+        
+            <%= image_tag img, stlye: 'height: 100px' %></th>
+            
         <% end %>
     <% end %>
+    <%= link_to "order this item", new_order_path %>
 <% end %>
-</div>
-</table>
 

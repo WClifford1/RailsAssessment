@@ -1,0 +1,41 @@
+<h1>Orders#new</h1>
+<p>Find me in app/views/orders/new.html.erb</p>
+
+
+<table>
+<tr>
+  <th> Title</th>
+  <th>Author</th>
+  <th>Price</th>
+</tr>
+<tr>
+  <td><%= @listing.title %></td>
+  <td><%= @listing.description %></td>
+  <td><%= @listing.price %></td>
+</tr>
+<tr>
+<th colspan="2">Total</th>
+<th><%= number_to_currency @listing.price %></th>
+</tr>
+</table>
+
+
+<p>
+    <button>Checkout</button>
+</p>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+ var stripe = Stripe ('pk_test_VusyrkBWBUZap422qh8wkAsL00dkbBeRdG');
+function goToCheckout() {
+ stripe.redirectToCheckout({
+  sessionId: '<%= @stripe_checkout_session.id %>',
+ }).then(function (result) {
+//   // If `redirectToCheckout` fails due to a browser or network
+//   // error, display the localized error message to your customer
+//   // using `result.error.message`.
+ });
+}
+var button = document.querySelector('button');
+button.addEventListener('click', goToCheckout);
+</script>

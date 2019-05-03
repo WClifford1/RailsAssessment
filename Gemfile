@@ -5,6 +5,8 @@ ruby '2.6.0'
 gem 'dotenv-rails', groups: [:test, :development]
 gem 'cloudinary'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 
 
 
