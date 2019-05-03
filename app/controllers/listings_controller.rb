@@ -20,12 +20,11 @@ class ListingsController < ApplicationController
     @listing.image.attach(params[:listing][:image])
     @listing.user = current_user
     if @listing.save
-      redirect_to listings_path
+      redirect_to listings_path, notice: 'Listing successfully created' 
     else
       render :new
     end
   end
-
   def edit
   end
 end
