@@ -1,3 +1,5 @@
+
+
 <div class="listing-index-grid pt4">
   <% @listings.each do |listing| %>
 
@@ -9,15 +11,13 @@
                     <% end %>
                 <% end %>
 
-      <%
-=begin%>
- <% if listing.condition? %>
-        <div class="condition">
-          <span class="tag is-dark"><%= listing.condition %></span>
+  <%# REMEMBER THAT THIS IS THE DROPDOWN BOX FOR THE EDIT PAGE %>
+ <% if listing.country? %>
+        <div class="country">
+          <span class="tag is-dark"><%= listing.country %></span>
         </div>
       <% end %> 
-<%
-=end%>
+
       </div>
 
 

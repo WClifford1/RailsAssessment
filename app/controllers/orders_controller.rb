@@ -53,7 +53,7 @@ class OrdersController < ApplicationController
   def destroy
     @cart = Cart.find(session[:cart_id])
     @order.destroy
-    redirect_to cart_path(@cart), notice "Item was successfully removed"
+    redirect_to cart_path(@cart), notice: "Item was successfully removed"
   end
 
 private

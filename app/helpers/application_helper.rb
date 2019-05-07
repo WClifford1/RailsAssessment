@@ -6,7 +6,7 @@ module ApplicationHelper
     end
     
     def total_cart_items
-         total = @cart.line_items.map { |item| item.quantity }.sum
+         total = @cart.orders.map { |item| item.quantity }.sum
          return total if total > 0
     end
 end

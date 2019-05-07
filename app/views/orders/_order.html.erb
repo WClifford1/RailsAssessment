@@ -1,0 +1,25 @@
+<div class="columns align-items-center">
+  <div class="column is-1">
+    <%= order.quantity %>
+  </div>
+  <div class="column is-2">
+    
+  </div>
+  <div class="column is-9">
+    <strong><%= order.listing.title %></strong>
+    <div class="columns align-items-center">
+      <div class="content column is-9">
+        <%= truncate(order.listing.description, length: 140) %>
+      </div>
+      <div class="column is-3 has-text-right">
+        <strong class="f4"><%= number_to_currency(order.total_price) %></strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="has-text-right">
+  <%= link_to 'Remove Item', order, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-small mb4" %>
+</div>
+
+<hr/ >
