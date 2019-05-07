@@ -6,11 +6,35 @@ rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
     @carts = Cart.all
   end
 
-  def show
+  def new
+    @order = Order.new
+    
   end
 
-  def new
-    @cart = Cart.new
+  def show
+    # the_listing_id = params[:id]
+    # @listing = Cart.find(the_listing_id)
+    # Stripe.api_key = 'sk_test_5VriwPJF8EScOW0VlkIW36p200X2SvMzbP'
+
+    # line_items = @cart.listings.map { |listing|
+    #   {
+    #     name: listings.title,
+    #     amount: listings.price
+    #   }
+    # }
+
+    # @stripe_checkout_session =  Stripe::Checkout::Session.create(
+    #   payment_method_types: ['card'],
+    #   line_items: [{
+    #     name: @listing.title,
+    #     description: @listing.description,
+    #     amount: (@listing.price * 100).to_i,
+    #     currency: 'aud',
+    #     quantity: '1'
+    #   }],
+    #   success_url: 'http://localhost3000/success',
+    #   cancel_url: 'http://localhost3000/cancel',
+    # )
   end
 
   def edit
