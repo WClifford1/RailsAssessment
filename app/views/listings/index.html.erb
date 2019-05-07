@@ -1,42 +1,40 @@
-<div class="list-button">
-<%= link_to  "Create new listing", new_listing_path, :class => 'btn btn-warning' %>
+
+
+<div class="listing-index-grid pt4">
+  <% @listings.each do |listing| %>
+
+    <div class="listing border-light">
+      <div class="listing-thumb">
+       <% if listing.image.attached? %>
+                    <% for img in listing.image %>
+                        <%= image_tag img, width: 64 %></th>
+                    <% end %>
+                <% end %>
+
+  <%# REMEMBER THAT THIS IS THE DROPDOWN BOX FOR THE EDIT PAGE %>
+ <% if listing.country? %>
+        <div class="country">
+          <span class="tag is-dark"><%= listing.country %></span>
+        </div>
+      <% end %> 
+
+      </div>
+
+
+    <div class="pa3">
+
+      <h3 class="fw7 f4 title"><%= link_to listing.title, listing %></h3>
+
+      <p class="has-text-gray fg pt1">Sold by <%= listing.user.email %></p>
+
+      <p class="f3 fw6 has-text-right pt2 price"><%= number_to_currency(listing.price) %></p>
+
+      <% if listing_author(listing) %>
+         <%= link_to 'Edit', edit_listing_path(listing), class: "button is-small" %>
+         <%= link_to 'Delete', listing, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small" %>
+      <% end %>
+
+    </div>
+  </div>
+  <% end %>
 </div>
-
-<div class="title">
-<h1>Featured Products</h1>
-</div>
-
-
-<h1>Your listings</h1>
-</div>
-
-<div class="title">
-
-<table>
-<% @listings.each do |listing| %>
-    <%= listing.title %>
-    
-    
-    <%= listing.price %>
-    
-    <%= listing.description %>
-    
-    <%= listing.address %>
-    
-    <%= listing.city %>
-   
-    <th><%= listing.state %>
-   
-    <%= listing.country %>
-    
-    
-    <% if listing.image.attached? %>
-        <% for img in listing.image %>
-        
-            <%= image_tag img, stlye: 'height: 100px' %></th>
-            
-        <% end %>
-    <% end %>
-    <%= link_to "order this item", new_order_path %>
-<% end %>
-
