@@ -1,5 +1,7 @@
 {
   "name": "shop",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.7.4"
+  }
 }
