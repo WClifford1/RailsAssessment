@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'carts/index'
+  get 'carts/show'
+  get 'carts/new'
+  get 'carts/edit'
+  get 'carts/create'
+  get 'carts/update'
+  get 'carts/destroy'
   get 'orders/new'
   get 'success', to: "orders#create"
   # get 'orders/show'
