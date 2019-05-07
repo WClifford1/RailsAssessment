@@ -3,23 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.list-button {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    // border: black 2px dotted;
-}
-
-#listings {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-// table {
-//     border: 1px solid black;
+// .list-button {
+//     display: flex;
+//     justify-content: flex-end;
 // }
+
+// .title {
+//     display: flex;
+//     justify-content: center;
+//     margin: 20px;
+//     // border: black 2px dotted;
+// }
+
+// #listings {
+//     display: flex;
+//     justify-content: center;
+//     margin: 20px;
+// }
+// // table {
+// //     border: 1px solid black;
+// // }
+
+.listing-show {
+    .feature-image img {
+      width: 100%;
+    }
+    .add-to-cart {
+      width: 100%;
+    }
+  }
