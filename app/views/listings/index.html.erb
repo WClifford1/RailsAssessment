@@ -1,17 +1,29 @@
-<div class="list-button">
-<%= link_to  "Create new listing", new_listing_path, :class => 'btn btn-warning' %>
-</div>
+<div class="listing-index-grid pt4">
+  <% @listings.each do |listing| %>
 
-<div class="title">
-<h1>Featured Products</h1>
-</div>
+    <div class="listing border-light">
+      <div class="listing-thumb">
+       <% if listing.image.attached? %>
+                    <% for img in listing.image %>
+                        <%= image_tag img, width: 64 %></th>
+                    <% end %>
+                <% end %>
 
-<div class="title">
+      <%
+=begin%>
+ <% if listing.condition? %>
+        <div class="condition">
+          <span class="tag is-dark"><%= listing.condition %></span>
+        </div>
+      <% end %> 
+<%
+=end%>
+      </div>
 
-<h1>Your listings</h1>
-</div>
 
+    <div class="pa3">
 
+<<<<<<< HEAD
 <% @listings.each do |listing| %>
     <%= listing.title %>
     <% if listing.image.attached? %>
@@ -20,3 +32,20 @@
         <% end %>
     <% end %>
 <% end %>
+=======
+      <h3 class="fw7 f4 title"><%= link_to listing.title, listing %></h3>
+
+      <p class="has-text-gray fg pt1">Sold by <%= listing.user.email %></p>
+
+      <p class="f3 fw6 has-text-right pt2 price"><%= number_to_currency(listing.price) %></p>
+
+      <% if listing_author(listing) %>
+         <%= link_to 'Edit', edit_listing_path(listing), class: "button is-small" %>
+         <%= link_to 'Delete', listing, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small" %>
+      <% end %>
+
+    </div>
+  </div>
+  <% end %>
+</div>
+>>>>>>> fafd776423d9118255080ecd407b269b294a8ff5

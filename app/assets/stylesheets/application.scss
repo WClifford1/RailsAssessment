@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
 .user-form {
     display: flex;
     // border: 2px red solid;
@@ -39,3 +40,62 @@ body {
 }
 
 @import "bootstrap";
+=======
+//  @import "bootstrap";
+
+ $link: #444;
+$link-hover: #222;
+
+@import "bulma";
+@import "functions";
+
+
+.notification {
+  border-radius: 0;
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.listing-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+  .listing {
+    border-left: 0;
+    border-top: 0;
+    position: relative;
+    min-height: 375px;
+
+    .title {
+      line-height: 1.6rem;
+    }
+    .price {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+
+  .listing-thumb {
+    position: relative;
+    max-height: 150px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    .condition {
+      position: absolute;
+      bottom: 10px;
+      right: 9px;
+    }
+  }
+}
+>>>>>>> fafd776423d9118255080ecd407b269b294a8ff5
