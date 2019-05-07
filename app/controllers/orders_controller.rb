@@ -6,8 +6,8 @@ class OrdersController < ApplicationController
   end
 
   def new
-    the_listing_id = params[:listing]
-    @listing = Listing.find(1)
+    the_listing_id = params[:listing_id]
+    @listing = Listing.find(the_listing_id)
     Stripe.api_key = 'sk_test_5VriwPJF8EScOW0VlkIW36p200X2SvMzbP'
 
     @stripe_checkout_session =  Stripe::Checkout::Session.create(

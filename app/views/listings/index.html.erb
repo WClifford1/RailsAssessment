@@ -7,36 +7,55 @@
 </div>
 
 
-<h1>Your listings</h1>
-</div>
-
-<div class="title">
-
 <table>
-<% @listings.each do |listing| %>
-    <%= listing.title %>
-    
-    
-    <%= listing.price %>
-    
-    <%= listing.description %>
-    
-    <%= listing.address %>
-    
-    <%= listing.city %>
-   
-    <th><%= listing.state %>
-   
-    <%= listing.country %>
-    
-    
-    <% if listing.image.attached? %>
-        <% for img in listing.image %>
-        
-            <%= image_tag img, stlye: 'height: 100px' %></th>
-            
-        <% end %>
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Image</th>
+        <th>Edit</th>
+        <th>Show</th>
+        <th>Order</th>
+    </tr>
+
+    <% @listings.each do |listing| %>
+
+    <%
+=begin%>
+ <small>Created by: <%= x.user.username if x.user%>,
+    <%= time_ago_in_words(x.created_at) %> ago,
+    last updated: <%= time_ago_in_words(x.updated_at) %>
+</small> 
+<%
+=end%>
+        <tr>
+            <td><%= listing.title %></td>
+            <td><%= number_to_currency(listing.price) %></td>
+            <td><%= listing.description %></td>
+            <td><%= listing.city %></td>
+            <td><%= listing.state %></td>
+            <td><%= listing.country %></td>
+            <td>
+                <% if listing.image.attached? %>
+                    <% for img in listing.image %>
+                        <%= image_tag img, width: 64 %></th>
+                    <% end %>
+                <% end %>
+            </td>
+            <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+            <td><%= link_to 'Show', listing_path(listing) %></td>
+            <td><%= link_to "Order", new_order_path %></td>
+            <%
+=begin%>
+ <td><%= link_to 'Delete', article_path(listing), method: :delete, data: {confirm: "Are you sure?"} %></td> 
+<%
+=end%>
+        </tr>
     <% end %>
-    <%= link_to "order this item", new_order_path %>
-<% end %>
+</table>
+
+
 

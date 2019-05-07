@@ -7,7 +7,6 @@ class ListingsController < ApplicationController
 
   def show
     @listing = Listing.find(listing_params[:listing])
-    
   end
 
   def new
@@ -25,8 +24,15 @@ class ListingsController < ApplicationController
       render :new
     end
   end
+
   def edit
   end
+
+  def destroy
+    @listing.destroy
+    redirect_to listings_path, notice: 'Listing successfully deleted'
+end
+
 end
 
 private

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_03_003313) do
+ActiveRecord::Schema.define(version: 2019_05_07_000604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,11 @@ ActiveRecord::Schema.define(version: 2019_05_03_003313) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "listings", force: :cascade do |t|
@@ -70,6 +75,9 @@ ActiveRecord::Schema.define(version: 2019_05_03_003313) do
     t.bigint "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "order"
+    t.bigint "cart_id"
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
     t.index ["listing_id"], name: "index_orders_on_listing_id"
   end
 
@@ -101,6 +109,7 @@ ActiveRecord::Schema.define(version: 2019_05_03_003313) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "listings", "users"
+  add_foreign_key "orders", "carts"
   add_foreign_key "orders", "listings"
   add_foreign_key "profiles", "users"
 end
