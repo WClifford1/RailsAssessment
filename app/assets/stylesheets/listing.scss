@@ -67,3 +67,39 @@
 
     }
 }
+
+.image-box {
+    padding-bottom: 10px;
+
+    .form-control {
+        height: 100%;
+    }
+}
+
+// }
+
+
+
+.navbar-header {
+    width: 100%;
+    display: flex;
+}
+
+
+.nav {
+    display: flex;
+    // border: 2px red solid;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+
+    .edit-button {
+        margin-left: auto;
+    }
+
+    .logout-button {
+        // border: 2px red solid;
+        color: #777a81;
+    }
+
+}

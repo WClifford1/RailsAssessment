@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -17,9 +18,15 @@
     <p class="alert"><%= alert %></p>
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'btn btn-dark' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-dark'  %>
+<header class="nav">
+  <p>Logged in as <strong><%= current_user.email %></strong></p>
+  <div class="edit-button">
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'btn' %> 
+  </div>
+  <div class="logout-button">
+    <%= link_to "", destroy_user_session_path, method: :delete, :class => "fas fa-sign-out-alt"  %>
+  </div>
+  </div>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-dark'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'btn btn-dark'  %>
