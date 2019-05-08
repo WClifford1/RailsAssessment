@@ -4,9 +4,6 @@ class Listing < ApplicationRecord
   has_many_attached :image
   has_many :orders
 
-  CITY = %w{ Brisbane Sydney Melbourne Gold Coast Perth }
-  STATE = %w{ QLD, NSW, VIC, TAS, NT, WA, ACT, SA }
-  COUNTRY = %w{ AUSTRALIA }
 
   private
 
