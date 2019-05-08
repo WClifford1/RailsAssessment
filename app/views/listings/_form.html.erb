@@ -1,49 +1,53 @@
+<div class="form">
 <%= form_with(model: listing, local: true) do |form| %>
 
+<div class="block is info">
     <div class="field">
-        <%= form.label :title %>
-        <%= form.text_field :title %>
+       <%= form.label :title, class: "label" %>
+        <%= form.text_field :title, class: "input" %>
+    </div>
     </div>
 
     <div class="field">
-        <%= form.label :price %>
-        <%= form.text_field :price %>
+        <%= form.label :price, class: "label" %>
+        <%= form.text_field :price, class: "input" %>
     </div>
 
 
 
     <div class="field">
-        <%= form.label :description %>
-        <%= form.text_field :description %>
+        <%= form.label :description, class: "label" %>
+        <%= form.text_field :description, class: "input" %>
     </div>
 
     <div class="field">
-        <%= form.label :address %>
-        <%= form.text_field :address %>
+        <%= form.label :address, class: "label" %>
+        <%= form.text_field :address, class: "input" %>
     </div>
 
     <div class="field">
-        <%= form.label :city %>
-        <%= form.text_field :city %>
+        <%= form.label :city, class: "label" %>
+        <%= form.text_field :city, class: "input" %>
     </div>
 
     <div class="field">
-        <%= form.label :state %>
-        <%= form.text_field :state %>
+        <%= form.label :state, class: "label" %>
+        <%= form.text_field :state, class: "input" %>
     </div>
 
     <div class="field">
-        <%= form.label :country %>
-        <%= form.text_field :country %>
+        <%= form.label :country, class: "label" %>
+        <%= form.text_field :country, class: "input" %>
     </div>
 
     <div class="field">
-        <%= form.label :image %>
-        <%= form.file_field :image %>
+        <%= form.label :image, class: "label" %>
+        <%= form.file_field :image, class: "button is-primary" %>
     </div>
 
-    <div class="actions">
+    <div class="control">
         <%= form.submit %>
     </div>
 
 <% end %> 
+</div>
