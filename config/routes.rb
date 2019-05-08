@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   resources :listings
   resources :charges
   devise_for :users
-  root "listings#index"
+
+  root "listings#landing"
 end
 
 
