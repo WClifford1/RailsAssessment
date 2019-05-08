@@ -25,21 +25,24 @@
       </div>
 
 
-    <div class="pa3">
+    <div class="pa2 products">
 
-      <h3 class="fw7 f4 title"><%= link_to listing.title.capitalize, listing %></h3>
-      <p class="content"><strong>Description:</strong> <%= link_to listing.description, listing %></p>
+      <h3 class="fw7 f4 title box has-text-centered"><%= link_to listing.title.capitalize, listing %></h3>
+      <p class="content is-light"><strong>Description:</strong> <%= link_to listing.description, listing %></p>
       <p class="content"><strong>Country:</strong> <span class="tag is-warning"><%= link_to listing.country.capitalize, listing %></span></p>
 
 
-      <p class="has-text-gray fg pt1">Seller: <strong><%= listing.user.email %></strong></p>
+      
 
-      <p class="f3 fw6 has-text-right pt2 price"><%= number_to_currency(listing.price) %></p>
 
       <% if listing_author(listing) %>
          <%= link_to 'Edit', edit_listing_path(listing), class: "button is-small is-primary" %>
          <%= link_to 'Delete', listing, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small is-info" %>
       <% end %>
+      
+      <p class="f5 has-text-left pt1">Seller: <strong><%= listing.user.email %></strong></p>
+
+      <p class="f3 fw6 has-text-right pt2 price"><%= number_to_currency(listing.price) %></p>
 
     </div>
   </div>
