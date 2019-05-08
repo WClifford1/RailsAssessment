@@ -35,7 +35,7 @@
           <div class="navbar-item">
             <div class="field is-grouped">
             <% if total_cart_items %>
-              <%= link_to cart_path(@cart), class:"navbar-item button is-warning" do %>
+              <%= link_to cart_path(@cart), class:"navbar-item button" do %>
               <span class="icon is-small">
                 <i class="fa fa-shopping-cart"></i>
               </span>
@@ -45,7 +45,7 @@
               <% end %>
             <% end %>
             <% if user_signed_in? %>
-              <%= link_to 'Sell', new_listing_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'Sell', new_listing_path, class: "navbar-item button is-info" %>
               <div class="navbar-item has-dropdown is-hoverable">
                 <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
                 <div class="navbar-dropdown is-right">
