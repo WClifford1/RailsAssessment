@@ -5,7 +5,7 @@
 <div class="block is info">
     <div class="field">
        <%= form.label :title, class: "label" %>
-        <%= form.text_field :title, class: "input" %>
+        <%= form.text_field :title, placeholder: "What is the name of your tek?", class: "input" %>
     </div>
     </div>
 
@@ -13,38 +13,38 @@
 
     <div class="field">
         <%= form.label :price, class: "label" %>
-        <%= form.text_field :price, class: "input" %>
+        <%= form.text_field :price, placeholder: "Set a price for your tek", class: "input" %>
     </div>
 
 
 
     <div class="field">
         <%= form.label :description, class: "label" %>
-        <%= form.text_field :description, class: "input" %>
+        <%= form.text_field :description, placeholder: "Describe your tek", class: "input" %>
     </div>
 
     <div class="field">
         <%= form.label :address, class: "label" %>
-        <%= form.text_field :address, class: "input" %>
+        <%= form.text_field :address, placeholder: "Input your mailing address", class: "input" %>
     </div>
 <div class="columns">
 <div class="column">
     <div class="field">
         <%= form.label :city, class: "label has-text-centered" %>
-        <%= form.text_field :city, class: "input" %>
+        <%= form.text_field :city, placeholder: "Mailing city", class: "input" %>
     </div>
     </div>
 <div class="column">
     <div class="field">
         <%= form.label :state, class: "label has-text-centered" %>
-        <%= form.text_field :state, class: "input" %>
+        <%= form.text_field :state, placeholder: "Mailing state", class: "input" %>
     </div>
     </div>
 
 <div class="column">
     <div class="field">
         <%= form.label :country, class: "label has-text-centered" %>
-        <%= form.text_field :country, class: "input" %>
+        <%= form.text_field :country, placeholder: "Mailing country", class: "input" %>
     </div>
     </div>
     </div>
