@@ -1,6 +1,7 @@
+<h1 class="title">current user: <%= @current_user.username %></h1><br />
 <div class="form">
 <%= form_with(model: listing, local: true) do |form| %>
-
+ 
 <div class="block is info">
     <div class="field">
        <%= form.label :title, class: "label" %>
@@ -8,10 +9,7 @@
     </div>
     </div>
 
-    <div class="field">
-        <%= form.label :username, class: "label" %>
-        <%= form.text_field :username, class: "input" %>
-    </div>
+    
 
     <div class="field">
         <%= form.label :price, class: "label" %>
