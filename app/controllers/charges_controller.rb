@@ -1,4 +1,5 @@
 class ChargesController < ApplicationController
+    include CurrentCart
 
 def new
 end

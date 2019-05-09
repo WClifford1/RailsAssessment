@@ -51,5 +51,5 @@ def set_listing
 end
 
 def listing_params
-  params.required(:listing).permit(:title, :price, :description, :address, :city, :state, :country, :image)
+  params.required(:listing).permit( :title, :price, :description, :address, :city, :state, :country, :image)
 end
