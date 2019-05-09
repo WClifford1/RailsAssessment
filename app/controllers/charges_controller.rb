@@ -4,7 +4,7 @@ def new
 end
 
 def create
-@amount = 500
+@amount = @cart.total_price
 
 customer = Stripe::Customer.create({
     email: params[:stripeEmail],
