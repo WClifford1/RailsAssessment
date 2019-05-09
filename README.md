@@ -2,15 +2,15 @@
 
 # Two sided marketplace:
 #
-We have created an app which will be using Ruby on Rails which is connected to a Postgresql database
+We have created an app which will be using Ruby on Rails which is connected to a Postgresql database. We have decided to base it upon a electronics marketplace
 #Authenication
 We use the Ruby gem Devise which sets up the authentication for the application.
 #Authorisation
-The application will also be using Devise for the Authorisation features.
+The application will also be using Devise for the Authorisation features. We will also be using rollify to set roles for the users which will determine what they can and can't do
 #Uploading capability of images
-We will be using active storage for the time being as we are still trying work out cloudinary or similar services
+We are using a cloud service called cloudinary to upload the images to a host while locally it uses rails in-bult ActiveRecord
 #Payment plan
-For the payment scheme we plan to use stripe in the application as the process seems to be more readily accessible
+For the payment plan of the app we are using stripe which is a third party platform that handles payments. We inserted the code to use a javascript form upon checkout and will be redirected to a success page when finished.
 #Gems
 the gems we are using are as follows:
 Rails: 5.2.3
