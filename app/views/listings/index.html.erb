@@ -40,7 +40,7 @@
          <%= link_to 'Delete', listing, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small is-info" %>
       <% end %>
       
-      <p class="f5 has-text-left pt1">Seller: <strong><%= listing.user.email %></strong></p>
+      <p class="f5 has-text-left pt1">Seller: <strong><%= listing.user.username %></strong></p>
 
       <p class="f3 fw6 has-text-right pt2 price"><%= number_to_currency(listing.price) %></p>
 
