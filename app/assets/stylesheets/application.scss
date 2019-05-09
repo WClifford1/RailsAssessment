@@ -80,11 +80,19 @@ $link-hover: #222;
   .circle {
     display: flex;
     justify-content: center;
+
+  }
+
+  .field {
+    input.button.is-primary {
+      color: red;
+    }
   }
 }
 
-.field {
-  input.button.is-primary {
-    color: red;
+@media screen and (max-width:400px) {
+  .circle {
+    height: 30px;
+    width: 30px;
   }
 }

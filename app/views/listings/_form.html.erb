@@ -1,4 +1,4 @@
-<h1 class="title">current user: <%= @current_user.username %></h1><br />
+<h1 class="title has-text-centered">Hi <%= @current_user.username.capitalize %>. Let's sell your tek!</h1><br />
 <div class="form">
 <%= form_with(model: listing, local: true) do |form| %>
  
