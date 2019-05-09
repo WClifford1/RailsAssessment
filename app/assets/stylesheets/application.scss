@@ -15,7 +15,7 @@
  */
 //  @import "bootstrap";
 
- $link: #444;
+$link: #444;
 $link-hover: #222;
 
 @import "bulma";
@@ -43,6 +43,7 @@ $link-hover: #222;
     .title {
       line-height: 1.6rem;
     }
+
     .price {
       position: absolute;
       bottom: 10px;
@@ -58,6 +59,7 @@ $link-hover: #222;
     img {
       max-width: 100%;
       width: 100%;
+
       &:hover {
         opacity: .9;
       }
@@ -68,5 +70,21 @@ $link-hover: #222;
       bottom: 10px;
       right: 9px;
     }
+  }
+}
+
+.round {
+
+  display: flex;
+
+  .circle {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.field {
+  input.button.is-primary {
+    color: red;
   }
 }

@@ -55,9 +55,15 @@
                 </div>
               </div>
             <% else %>
+            <div class="columns">
+            <div class="column">
             <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-info pr5 pl5" %>
+            </div>
+            <div class="column">
             <%= link_to "Sign Up", new_user_registration_path, class:"navbar-item button is-primary pr5 pl5"%>
+            </div>
             <% end %>
+            </div>
             </div>
           </div>
         </div>
