@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :charges
   devise_for :users
 
+
   root "listings#landing"
 end
 
@@ -43,3 +44,7 @@ end
   # # post 'listing/new'
   # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # root "listings#index"
+=======
+  root "listings#index"
+end
+
