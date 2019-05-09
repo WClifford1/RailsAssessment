@@ -6,23 +6,11 @@
 
     <div class="listing border-light">
       <div class="listing-thumb">
-       <% if listing.image.attached? %>
-                    <% for img in listing.image %>
-                        <%= image_tag img, width: 64 %></th>
-                    <% end %>
-                <% end %>
-
-  <%# REMEMBER THAT THIS IS THE DROPDOWN BOX FOR THE EDIT PAGE %>
- <%
-=begin%>
- <% if listing.country? %>
-        <div class="country">
-          <span class="tag is-dark"><%= listing.country %></span>
-        </div>
-      <% end %>  
-<%
-=end%>
-
+        <% if listing.image.attached? %>
+          <% for img in listing.image %>
+              <%= image_tag img, width: 64 %></th>
+          <% end %>
+        <% end %>
       </div>
 
 
@@ -42,7 +30,9 @@
          <%= link_to 'Delete', listing, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small is-info" %>
       <% end %>
       
-      <p class="f5 has-text-left">Seller: <strong><%= listing.user.email %></strong></p>
+
+      <p class="f5 has-text-left pt1">Seller: <strong><%= listing.user.username %></strong></p>
+
 
      
 
@@ -50,3 +40,10 @@
   </div>
   <% end %>
 </div>
+
+
+
+
+
+
+

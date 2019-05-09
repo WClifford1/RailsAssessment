@@ -12,6 +12,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
   end
 
   def show
+    @listings = Listing.all.order("created_at desc")
     # the_listing_id = params[:id]
     # @listing = Cart.find(the_listing_id)
     # Stripe.api_key = 'sk_test_5VriwPJF8EScOW0VlkIW36p200X2SvMzbP'
