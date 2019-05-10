@@ -1,6 +1,5 @@
 class Listing < ApplicationRecord
   resourcify
-  include Authority::UserAbilities
   before_destroy :not_referenced_by_any_order
   has_many_attached :image
   has_many :orders
