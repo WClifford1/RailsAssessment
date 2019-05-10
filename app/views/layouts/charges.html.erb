@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tekmor</title>
+    <title>Tekmore</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application' %>
   </head>
   <body class="<%= yield (:body_class) %>">
@@ -21,7 +21,7 @@
     <% end %>
      <nav class="navbar is-white" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <%= link_to root_path, class:"navbar-item" do %>
+        <%= link_to listings_path, class:"navbar-item" do %>
           <h1 class="title is-5">Tekmor</h1>
         <% end  %>
       <div class="navbar-burger burger" data-target="navbar">
@@ -49,15 +49,21 @@
               <div class="navbar-item has-dropdown is-hoverable">
                 <%= link_to 'Account', edit_user_registration_path, class: "navbar-link pl5 pr5" %>
                 <div class="navbar-dropdown is-right">
-                  <%= link_to current_user.email, edit_user_registration_path, class:"navbar-item" %>
+                  <%= link_to current_user.username, edit_user_registration_path, class:"navbar-item" %>
                   <%= link_to "Edit Profile", edit_user_registration_path, class:"navbar-item" %>
                   <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
                 </div>
               </div>
             <% else %>
-            <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-warning" %>
-            <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-warning"%>
+            <div class="columns">
+            <div class="column">
+            <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-info pr5 pl5" %>
+            </div>
+            <div class="column">
+            <%= link_to "Sign Up", new_user_registration_path, class:"navbar-item button is-primary pr5 pl5"%>
+            </div>
             <% end %>
+            </div>
             </div>
           </div>
         </div>
