@@ -1,9 +1,14 @@
 class Listing < ApplicationRecord
+  resourcify
+  include Authority::UserAbilities
   before_destroy :not_referenced_by_any_order
-  belongs_to :user, optional: true
   has_many_attached :image
   has_many :orders
+  belongs_to :user
 
+  def can_update?(user)
+    return self.user == user || user.has_role?(:admin)
+  end
 
   private
 

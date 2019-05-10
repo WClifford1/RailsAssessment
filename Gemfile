@@ -16,6 +16,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'rails', '~> 5.2.3'
 
 
+gem 'rolify'
 gem "activestorage-cloudinary-service", "~> 0.2.3"
 
 # Devise gem for login and authentication
