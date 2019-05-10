@@ -7,7 +7,7 @@
 <% if listing_author(@listing) %>
 <% if @listing.image.attached? %>
 <% for img in @listing.image %>
-        <%= image_tag img %>
+        <%= image_tag img, width: 400 %>
       <% end %>
       
 <% end %>
