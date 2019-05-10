@@ -19,10 +19,10 @@
       <p class="alert"><%= alert %></p>
     </div>
     <% end %>
-     <nav class="navbar is-white pt2 pb2" role="navigation" aria-label="main navigation">
+     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <%= link_to root_path, class:"navbar-item" do %>
-          <h1 class="title is-5 pl4">TEKMOR</h1>
+        <%= link_to listings_path, class:"navbar-item" do %>
+          <h1 class="title is-5">Tekmor</h1>
         <% end  %>
       <div class="navbar-burger burger" data-target="navbar">
         <span></span>
@@ -47,7 +47,7 @@
             <% if user_signed_in? %>
               <%= link_to 'Sell', new_listing_path, class: "navbar-item button is-info pl5 pr5" %>
               <div class="navbar-item has-dropdown is-hoverable">
-                <%= link_to 'Menu', edit_user_registration_path, class: "navbar-link pl5 pr5" %>
+                <%= link_to 'Account', edit_user_registration_path, class: "navbar-link pl5 pr5" %>
                 <div class="navbar-dropdown is-right">
                   <%= link_to current_user.username, edit_user_registration_path, class:"navbar-item" %>
                   <%= link_to "Edit Profile", edit_user_registration_path, class:"navbar-item" %>
