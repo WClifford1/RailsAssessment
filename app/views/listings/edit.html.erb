@@ -3,3 +3,12 @@
 <div class="pv4">
     <%= render 'form', listing: @listing %>
 </div>
+
+<% if listing_author(@listing) %>
+<% if @listing.image.attached? %>
+<% for img in @listing.image %>
+        <%= image_tag img %>
+      <% end %>
+      
+<% end %>
+<% end %>

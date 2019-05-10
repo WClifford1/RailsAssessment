@@ -11,11 +11,11 @@
 
 <% @cart.orders.each do |x| %>
   
-    <% if x.listing.image.attached? %>  
+    <% if x.listing.image.attached? %>
       <% for img in x.listing.image %>
-      <%= image_tag img, width: 64 %>
+        <%= image_tag img, width: 64 %>
+      <% end %>
       <%= render x %>
-    <% end %>
     <% else %>
     <%= render x %>
   <% end %>
