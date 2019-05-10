@@ -1,5 +1,6 @@
 class ChargesController < ApplicationController
     include CurrentCart
+    after_action :destroy_cart, only: [:create]
 
 def new
 end
@@ -25,3 +26,9 @@ rescue Stripe::CardError => e
     redirect_to new_charge_path
 end
 end
+
+private
+
+def destroy_cart
+    @cart.destroy 
+  end

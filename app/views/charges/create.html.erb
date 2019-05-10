@@ -1,14 +1,30 @@
-<h2>Thanks, you paid <strong><%= number_to_currency(@cart.total_price) %></strong>!</h2>
+<div class="checkout">
+<div class="thank has-text-centered">
+<h1 class="title">Order Successful!</h1>
+      <p class="content">Thank you for your custom. Your order will be on its way shortly. Just sit tight and hang five!</p>
+      <h1 class="title">Order Reciept</h1>
+      <ul>
+            <li>User: <%= current_user.username %></li>
+            <li>Tek Gadgets:<br>
+                  <% @cart.orders.each do |x| %>
+                        <%= x.listing.title %><br>
+                  <% end %>
+            </li>
+            <li>Total: <%= number_to_currency(@cart.total_price) %></li>
+      </ul>
+      </div>
 
-<<<<<<< HEAD
+      <div class="animation">
+            <%= image_tag("air.svg", :alt => "hero image") %>
+      </div>
+</div>
 
 
-<div class="column">
-      <%= button_to 'Continue Shopping', @cart, method: :delete, class: "button is-primary has-fullwidth" %>
-=======
- <div class="column">
-    
-      <%= button_to 'Back to homepage', @cart, method: :delete, class: "button is-primary" %>
-      
->>>>>>> 137b81a1eb00baa9fd53ac44d55f44bb186e97ac
-    </div>
+<div class="columns">
+      <div class="column is-fullwidth">
+            <%= button_to 'Continue Shopping', listings_path, class: "button is-primary is-fullwidth" %>
+      </div>
+      <div class="column">
+            <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "button is-danger is-fullwidth" %>
+      </div>
+</div>
