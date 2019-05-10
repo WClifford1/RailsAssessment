@@ -9,4 +9,7 @@ class HomeController < ApplicationController
   def aboutus
   end
   
+  def termsandconditions
+  end
+
 end

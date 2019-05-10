@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   get '/home/contactus', to: 'home#contactus'
   get '/home/aboutus', to: 'home#aboutus'
+  get '/home/termsandconditions', to: 'home#termsandconditions'
   root "listings#landing"
 end
