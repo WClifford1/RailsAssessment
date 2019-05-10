@@ -1,4 +1,4 @@
-<h1 class="title has-text-centered">Hi <%= @current_user.username.capitalize %>. Let's sell your tek!</h1><br />
+
 <div class="form">
 <%= form_with(model: listing, local: true) do |form| %>
  
@@ -13,7 +13,7 @@
 
     <div class="field">
         <%= form.label :price, class: "label" %>
-        <%= form.text_field :price, placeholder: "Set a price for your tek", class: "input" %>
+        <%= form.number_field :price, placeholder: "Set a price for your tek", class: "input" %>
     </div>
 
 
