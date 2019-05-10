@@ -16,7 +16,7 @@
 
     <div class="pa2 products">
 
-      <h3 class="fw7 f4 title box has-text-centered"><%= link_to listing.title.capitalize, listing %></h3>
+      <h3 class="fw7 f4 title box has-text-centered has-text-justified"><%= link_to listing.title.capitalize, listing %></h3>
        <p class="f3 pb4"><%= number_to_currency(listing.price) %></p>
       <p class="content is-light"><strong>Description:</strong> <%= link_to listing.description, listing %></p>
       <p class="content"><strong>Country:</strong> <span class="tag is-warning"><%= link_to listing.country.capitalize, listing %></span></p>

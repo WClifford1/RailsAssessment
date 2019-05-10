@@ -1,3 +1,7 @@
 <h2>Thanks, you paid <strong><%= number_to_currency(@cart.total_price) %></strong>!</h2>
 
-<%= link_to "Back to listings", listings_path %>
+ <div class="column">
+    
+      <%= button_to 'Back to homepage', @cart, method: :delete, class: "button is-danger" %>
+      
+    </div>
