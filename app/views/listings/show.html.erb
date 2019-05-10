@@ -55,8 +55,12 @@
   </div>
 
   <% if listing_author(@listing) %>
-    <%= link_to 'Edit', edit_listing_path(@listing), class: 'button' %>
+    <%= link_to 'Edit', edit_listing_path(@listing), class: "button is-small is-primary" %>
   <% end %>
-</section>
 
-<%= link_to 'Delete', listing_path(@listing), method: :delete, data: {confirm: "Are you sure?"} %>
+
+  <% if listing_author(@listing) %>
+         <%= link_to 'Delete', @listing, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small is-info" %>
+      <% end %>
+
+      </section>
