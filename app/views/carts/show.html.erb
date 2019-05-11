@@ -3,9 +3,7 @@
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
-<div class="keep-shopping pv1 mt4 has-text-right">
-  <%= link_to 'Keep Shopping', listings_path, class: 'button is-warning' %>
-</div>
+
 <hr />
 <section class="section">
 
@@ -24,9 +22,12 @@
 
   <div class="columns">
     <div class="column">
-    
-      <%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-danger" %>
+      <%= link_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-danger" %>
     </div>
+
+  <div class="column">
+    <%= link_to 'Keep Shopping', listings_path, class: 'button is-warning' %>
+</div>
     
     <div class="column total has-text-right">
       <h4 class="title is-4">
@@ -44,9 +45,6 @@
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
-    <label class="amount">
-      <span>Amount: <%= number_to_currency(@cart.total_price) %></span>
-    </label>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"

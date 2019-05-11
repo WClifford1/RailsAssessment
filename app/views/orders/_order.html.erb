@@ -1,6 +1,6 @@
-<div class="columns align-items-center">
+<div class="columns">
   <div class="column is-1">
-    <%= order.quantity %>
+   <p class="content"> <%= order.quantity %>x</p>
   </div>
   <div class="column is-2">
     
@@ -11,7 +11,7 @@
       <div class="content column is-9">
         <%= truncate(order.listing.description, length: 140) %>
       </div>
-      <div class="column is-3 has-text-right">
+      <div class="column  has-text-right">
         <strong class="f4"><%= number_to_currency(order.total_price) %></strong>
       </div>
     </div>

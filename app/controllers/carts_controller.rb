@@ -65,7 +65,7 @@ class CartsController < ApplicationController
     def destroy
       @cart.destroy if @cart.id == session[:cart_id]
       session[:cart_id] = nil
-      redirect_to root_path, notice: "Cart was successfully deleted"
+      redirect_to listings_path, notice: "Cart was successfully deleted"
     end
   
   

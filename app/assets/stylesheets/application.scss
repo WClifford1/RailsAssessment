@@ -118,3 +118,14 @@ $link-hover: #222;
     text-align: center;
   }
 }
+
+
+
+.pay-but {
+  border: 2px solid black;
+
+  .stripe-button-el span {
+    display: none;
+  }
+
+}
