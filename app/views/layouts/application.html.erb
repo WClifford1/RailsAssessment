@@ -45,6 +45,7 @@
                 </span>
               <% end %>
             <% end %>
+            <%# The navigation bar has a drop down user menu if the user is logged in %>
             <% if user_signed_in? %>
               <%= link_to 'Sell', new_listing_path, class: "navbar-item button is-info pl5 pr5" %>
               <div class="navbar-item has-dropdown is-hoverable">

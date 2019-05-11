@@ -1,6 +1,7 @@
 class ChargesController < ApplicationController
     include CurrentCart
     after_action :destroy_cart, only: [:create]
+    before_action :authenticate_user!
 
 def new
 end

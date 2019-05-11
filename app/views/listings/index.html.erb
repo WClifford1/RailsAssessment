@@ -2,8 +2,8 @@
 
 <div class="listing-index-grid pt4">
 
+<%# If the listing has an image it will be displayed with a set width of 64 %>
   <% @listings.each do |listing| %>
-
     <div class="listing border-light">
       <div class="listing-thumb">
         <% if listing.image.attached? %>
@@ -16,6 +16,7 @@
 
     <div class="pa2 products">
 
+<%# The listings index page will display listing image, title, price, description and country %>
       <h3 class="fw7 f4 title box has-text-centered has-text-justified"><%= link_to listing.title.capitalize, listing %></h3>
        <p class="f3 pb4"><%= number_to_currency(listing.price) %></p>
       <p class="content is-light"><strong>Description:</strong> <%= link_to listing.description, listing %></p>
@@ -24,17 +25,17 @@
 
       
 
+<%# If any of the listings on the listing index page belong to the user currently signed in %>
+<%# 'EDIT' and 'DELETE' buttons will show up on the listing, which the user will be able to use %>
+<%# The user will be unable to see edit / delete buttons on listings which do not belong to them %>
 
       <% if listing_author(listing) %>
          <%= link_to 'Edit', edit_listing_path(listing), class: "button is-small is-primary" %>
          <%= link_to 'Delete', listing, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small is-info" %>
       <% end %>
       
-
+<%# The listing will also display the seller's username %>
       <p class="f5 has-text-left pt1">Seller: <strong><%= listing.user.username %></strong></p>
-
-
-     
 
     </div>
   </div>

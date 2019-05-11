@@ -1,7 +1,10 @@
+<%# This page displays once a successful purchase has been made %>
 <div class="checkout">
 <div class="thank has-text-centered">
 <h1 class="title has-text-success">Order Successful!</h1>
       <p class="content">Thank you for your custom. Your order will be on its way shortly. Just sit tight and hang five!</p>
+
+<%# Display a simple table of purchase information for the user to see %>      
       <table class="table is-striped is-bordered">
       <h1 class="title has-text-info">Order Reciept</h1>
       <tr>
@@ -17,6 +20,12 @@
             
             <td>Grand Total</td> <td><strong><%= number_to_currency(@cart.total_price) %></strong></td>
       </tr>
+      </tr>
+<%# The receipt number is currently a randomly generated number which is a place holder, if the app was deployed with stripe we would obtain the receipt number from stripe%>
+            <td>Receipt Number</td>
+            <td><%= rand(1000000000..9999999999) %></td>
+      <tr>
+      
       
       </table>
       </div>
