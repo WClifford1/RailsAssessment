@@ -154,6 +154,8 @@ As a user I can access the about us page, contact us page, listings page and ter
 
 #Workflow Diagram of user journey/s
 [url=https://ibb.co/CBHTzNP][img]https://i.ibb.co/fMxP2BD/Screen-Shot-2019-05-12-at-5-18-18-pm.png[/img][/url]
+[url=https://ibb.co/3pJgF60][img]https://i.ibb.co/wSv5QGK/LASTEST-WORKFLOW.jpg[/img][/url]
+[url=https://imgbb.com/]free picture hosting[/url]
 
 
 #Wireframes
