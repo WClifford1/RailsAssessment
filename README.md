@@ -97,12 +97,10 @@ View the website's contact us, about us and terms and conditions pages.
 [url=https://ibb.co/bB6XxLM][img]https://i.ibb.co/XsWt9pr/Screen-Shot-2019-05-12-at-5-07-13-pm.png[/img][/url]
 
 
-
 #Tech stack
 Ruby 2.6.0
 Rails 5.2.3
 PostgreSQL
-
 
 
 #Instructions on how to setup the application
@@ -127,7 +125,6 @@ Ensure your heroku dashboard has been set up with the correct values for your cl
 In terminal run: heroku login, heroku create, git push heroku master, heroku run rails db:migrate
 
 
-
 #Design documentation
 
 
@@ -135,6 +132,7 @@ In terminal run: heroku login, heroku create, git push heroku master, heroku run
 We used an agile methodology project management process.
 To start we decided what type of app we wanted to build. Once we had agreed to build an online electronics marketplace we then brainstormed ideas on a whiteboard. We brainstormed features that we wanted to add to the app and then seperated the features into catagroies of what would be needed for a minimal viable product and for what would be features which would be added later. 
  
+
 #User stories
 As an intended user of the application, I can register for a profile via the registration page
 As a user of the app I can log into my profile from the log in page
@@ -153,8 +151,10 @@ As a user of the app I can delete my account
 As a user of the app I can easily access the landing page, listings page, edit profile page and logout page from the nav bar
 As a user I can access the about us page, contact us page, listings page and terms and conditions page from the landing page.
 
+
 #Workflow Diagram of user journey/s
 [url=https://ibb.co/CBHTzNP][img]https://i.ibb.co/fMxP2BD/Screen-Shot-2019-05-12-at-5-18-18-pm.png[/img][/url]
+
 
 #Wireframes
 #Desktop Wireframes
@@ -191,17 +191,27 @@ As a user I can access the about us page, contact us page, listings page and ter
 [url=https://ibb.co/G2VC292][img]https://i.ibb.co/swFswCw/Sell-Page-2.jpg[/img][/url]
 [url=https://ibb.co/WWzzQhJ][img]https://i.ibb.co/pvKKg7F/Sign-Up-Page.jpg[/img][/url]
 
+
 #Database entity relationship diagram
 [url=https://ibb.co/9Z5X0Rg][img]https://i.ibb.co/qJQG8bj/Screen-Shot-2019-05-09-at-3-55-11-pm.png[/img][/url]
 
 
 #Details of planning process
 
+
 #Project plan and timeline
+
 
 #Screenshots of trello board
 #---------------------#
+
+
 #Answers to the 23 questions
+
+4. Describe the network infrastructure the App may be based on
+
+    The routes.rb file uses resources routing for the orders, carts, listings, charges and users controllers to generate the show, new, edit, create, update and destroy actions for each controller. The charges controller is used for making payments via Stripe. Additionally there are gets routings to display the contact us, about us and terms and conditions pages. The root page is set to be the landing page. 
+
 
 6. Identify the database to be used in your App and provide a justification for your choice
 
