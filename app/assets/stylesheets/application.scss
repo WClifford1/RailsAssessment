@@ -104,12 +104,17 @@ $link-hover: #222;
 
   .thank {
     width: 59%;
-    border: 2px solid red;
     justify-content: center;
     align-self: center;
   }
 
   .animation {
     width: 40%;
+  }
+}
+
+.table {
+  td {
+    text-align: center;
   }
 }

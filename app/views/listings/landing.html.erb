@@ -1,6 +1,7 @@
 
 
 <figure class="image is-3by1 pt2">
+<%# This is the main image on the landing page, it is also a link to the listings index page %>
   <%= link_to image_tag("4.png", :alt => "hero image"), listings_path %>
 </figure>
 
@@ -10,12 +11,17 @@
                         <div class="card">
                             <div class="card-content">
                                 <p class="content pb4 has-text-justified">
+  <%# This is a quick blurb introducing the user to the site and giving a quick set of instructions for its use %>
                                     Welcome to Tekmor. Your one stop shop for buying and selling all your electronic goods. Click on the logo on the center
                                     to go to the listings page and start shopping! You can reach the listings page at any time by clicking the Tekmor logo at the top lef of the screen.
                                     To read information about how to buy and sell on Tekmor, simply click the About us button below. Happy shopping.
 
                                 </p>
 
+
+<%# There are four large buttons on the landing page: Contact Us, Listings, About Us and Terms and Conditions %>
+<%# Each button has a large image and text displaying what it does %>
+<%# Both the image and the text are links that will take the user to the respective page %>
 <div class="columns round pb5">
 <div class="column circle">
                             <figure class="image is-128x128">
@@ -50,7 +56,7 @@
 </div>
 
 
-
+<%# At the bottom of the page we have placeholder links to the website's twitter and facebook pages %>
                             </div>
                             <footer class="card-footer pt3">
                                 <p class="card-footer-item">

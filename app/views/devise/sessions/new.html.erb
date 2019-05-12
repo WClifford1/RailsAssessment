@@ -3,8 +3,7 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<%#>removed the username field because it was conflicting with devise
-<%>
+<%# Removed the username field because it was conflicting with devise %>
   <div class="field">
     <%= f.label :email, class: "label" %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>

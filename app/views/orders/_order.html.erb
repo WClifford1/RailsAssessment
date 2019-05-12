@@ -1,3 +1,5 @@
+<%# This page is referenced in the cart show page %>
+
 <div class="columns align-items-center">
   <div class="column is-1">
     <%= order.quantity %>
@@ -17,7 +19,7 @@
     </div>
   </div>
 </div>
-
+<%# The button to remove an item from the cart, will ask the user if they are sure to prevent the user from accidently emptying their cart %>
 <div class="has-text-right">
   <%= link_to 'Remove Item', order, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-small mb4" %>
 </div>

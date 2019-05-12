@@ -1,17 +1,33 @@
+<%# This page displays once a successful purchase has been made %>
 <div class="checkout">
 <div class="thank has-text-centered">
-<h1 class="title">Order Successful!</h1>
+<h1 class="title has-text-success">Order Successful!</h1>
       <p class="content">Thank you for your custom. Your order will be on its way shortly. Just sit tight and hang five!</p>
-      <h1 class="title">Order Reciept</h1>
-      <ul>
-            <li>User: <%= current_user.username %></li>
-            <li>Tek Gadgets:<br>
-                  <% @cart.orders.each do |x| %>
+
+<%# Display a simple table of purchase information for the user to see %>      
+      <table class="table is-striped is-bordered">
+      <h1 class="title has-text-info">Order Reciept</h1>
+      <tr>
+            <td>User</td> <td><%= current_user.username %></td>
+      </tr>
+      <tr>            
+            <td>Tek Gadgets</td>
+                  <td><% @cart.orders.each do |x| %>
                         <%= x.listing.title %><br>
-                  <% end %>
-            </li>
-            <li>Total: <%= number_to_currency(@cart.total_price) %></li>
-      </ul>
+                  <% end %></td>
+      </tr>
+      <tr>
+            
+            <td>Grand Total</td> <td><strong><%= number_to_currency(@cart.total_price) %></strong></td>
+      </tr>
+      </tr>
+<%# The receipt number is currently a randomly generated number which is a place holder, if the app was deployed with stripe we would obtain the receipt number from stripe%>
+            <td>Receipt Number</td>
+            <td><%= rand(1000000000..9999999999) %></td>
+      <tr>
+      
+      
+      </table>
       </div>
 
       <div class="animation">
