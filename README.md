@@ -101,6 +101,8 @@ View the website's contact us, about us and terms and conditions pages.
 Ruby 2.6.0
 Rails 5.2.3
 PostgreSQL
+HTML
+CSS
 
 #Instructions on how to setup the application
 Deployment instructions: fork copy or git clone ssh address
