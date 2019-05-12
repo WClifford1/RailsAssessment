@@ -80,6 +80,20 @@ Create, edit and delete their own listings for items that they want to sell.
 View the website's contact us, about us and terms and conditions pages.
 
 #Screenshots
+[url=https://ibb.co/ZVC9LgK][img]https://i.ibb.co/bPntWvL/Screen-Shot-2019-05-12-at-4-56-10-pm.png[/img][/url]
+[url=https://ibb.co/cg0jstL][img]https://i.ibb.co/w0Vf2Cs/Screen-Shot-2019-05-12-at-4-56-40-pm.png[/img][/url]
+[url=https://ibb.co/sCMyWBP][img]https://i.ibb.co/qCPkJZn/Screen-Shot-2019-05-12-at-4-57-29-pm.png[/img][/url]
+[url=https://ibb.co/mT13Nbj][img]https://i.ibb.co/W5qLVGh/Screen-Shot-2019-05-12-at-4-58-00-pm.png[/img][/url]
+[url=https://ibb.co/X2zbVFp][img]https://i.ibb.co/h7KyC2H/Screen-Shot-2019-05-12-at-4-58-13-pm.png[/img][/url]
+[url=https://ibb.co/bNXdXQ2][img]https://i.ibb.co/XFtJtj3/Screen-Shot-2019-05-12-at-5-01-27-pm.png[/img][/url]
+[url=https://ibb.co/XY1wKH6][img]https://i.ibb.co/mNkx2pd/Screen-Shot-2019-05-12-at-4-59-33-pm.png[/img][/url]
+[url=https://ibb.co/MPHcQGb][img]https://i.ibb.co/SVgtGd2/Screen-Shot-2019-05-12-at-5-04-00-pm.png[/img][/url]
+[url=https://ibb.co/w6g7dJx][img]https://i.ibb.co/XJLDWyv/Screen-Shot-2019-05-12-at-5-04-20-pm.png[/img][/url]
+[url=https://ibb.co/bNXdXQ2][img]https://i.ibb.co/XFtJtj3/Screen-Shot-2019-05-12-at-5-01-27-pm.png[/img][/url]
+[url=https://ibb.co/TYPMjTP][img]https://i.ibb.co/9cyHKvy/Screen-Shot-2019-05-12-at-5-05-32-pm.png[/img][/url]
+[url=https://imgbb.com/][img]https://i.ibb.co/BjvPX48/Screen-Shot-2019-05-12-at-5-06-02-pm.png[/img][/url]
+[url=https://ibb.co/bB6XxLM][img]https://i.ibb.co/XsWt9pr/Screen-Shot-2019-05-12-at-5-07-13-pm.png[/img][/url]
+
 
 
 #Tech stack
@@ -138,9 +152,44 @@ As a user I can access the about us page, contact us page, listings page and ter
 
 
 #Wireframes
+#Desktop Wireframes
+[url=https://ibb.co/WKzn7Bk][img]https://i.ibb.co/ysk0Kg6/Cart-Menu-Page.jpg[/img][/url]
+[url=https://ibb.co/VM8YFRS][img]https://i.ibb.co/zPwV3pR/Edit-Profile-Page.jpg[/img][/url]
+[url=https://ibb.co/pZmBqfS][img]https://i.ibb.co/ctmSq6j/Landing-Page-2.jpg[/img][/url]
+[url=https://ibb.co/64WGcq8][img]https://i.ibb.co/vJjfCMh/Landing-Page-1.jpg[/img][/url]
+[url=https://ibb.co/sC5Vdqb][img]https://i.ibb.co/VxHqcTJ/Listings-Page.jpg[/img][/url]
+[url=https://ibb.co/Z2P6NM3][img]https://i.ibb.co/z6YhN41/Order-Success-Page.jpg[/img][/url]
+[url=https://ibb.co/bLdSPzV][img]https://i.ibb.co/Cv0kzhy/Sell-Page.jpg[/img][/url]
+[url=https://ibb.co/6PgRptd][img]https://i.ibb.co/cFDcp8m/Sign-In-Page.jpg[/img][/url]
+[url=https://ibb.co/ZGt443G][img]https://i.ibb.co/17hyy37/Sign-Up-Page.jpg[/img][/url]
+
+#Ipad wireframes
+[url=https://ibb.co/zG4Yt7c][img]https://i.ibb.co/FgDMd0v/Cart-Menu.jpg[/img][/url]
+[url=https://ibb.co/2SsWmZH][img]https://i.ibb.co/KDLbRKS/Edit-Profile.jpg[/img][/url]
+[url=https://ibb.co/pZmBqfS][img]https://i.ibb.co/ctmSq6j/Landing-Page-2.jpg[/img][/url]
+[url=https://ibb.co/w6k5ksG][img]https://i.ibb.co/pX7Y7yV/Landing-Page-1.jpg[/img][/url]
+[url=https://ibb.co/nR7d511][img]https://i.ibb.co/PtcXfWW/Listings-Page.jpg[/img][/url]
+[url=https://ibb.co/fGKB5P0][img]https://i.ibb.co/93fzLCY/Log-In-Page.jpg[/img][/url]
+[url=https://ibb.co/7k5kMqT][img]https://i.ibb.co/Sf8fYz1/Order-Success-Page.jpg[/img][/url]
+[url=https://ibb.co/dJ1GttZ][img]https://i.ibb.co/Dgs5YYd/Sell-Page-1.jpg[/img][/url]
+[url=https://ibb.co/G2VC292][img]https://i.ibb.co/swFswCw/Sell-Page-2.jpg[/img][/url]
+[url=https://ibb.co/WWzzQhJ][img]https://i.ibb.co/pvKKg7F/Sign-Up-Page.jpg[/img][/url]
+
+#mobile phone wireframes
+[url=https://imgbb.com/][img]https://i.ibb.co/LvGJ2Mq/Cart-Menu.jpg[/img][/url]
+[url=https://ibb.co/w6k5ksG][img]https://i.ibb.co/pX7Y7yV/Landing-Page-1.jpg[/img][/url]
+[url=https://ibb.co/YLVQ67B][img]https://i.ibb.co/2kphw73/Landing-Page-2.jpg[/img][/url]
+[url=https://imgbb.com/][img]https://i.ibb.co/0CFfGJt/Listings-Page.jpg[/img][/url]
+[url=https://ibb.co/fGKB5P0][img]https://i.ibb.co/93fzLCY/Log-In-Page.jpg[/img][/url]
+[url=https://ibb.co/7k5kMqT][img]https://i.ibb.co/Sf8fYz1/Order-Success-Page.jpg[/img][/url]
+[url=https://ibb.co/dJ1GttZ][img]https://i.ibb.co/Dgs5YYd/Sell-Page-1.jpg[/img][/url]
+[url=https://ibb.co/G2VC292][img]https://i.ibb.co/swFswCw/Sell-Page-2.jpg[/img][/url]
+[url=https://ibb.co/WWzzQhJ][img]https://i.ibb.co/pvKKg7F/Sign-Up-Page.jpg[/img][/url]
 
 
 #Database entity relationship diagram
+
+[url=https://ibb.co/9Z5X0Rg][img]https://i.ibb.co/qJQG8bj/Screen-Shot-2019-05-09-at-3-55-11-pm.png[/img][/url]
 #---------------------#
 
 #Details of planning process
@@ -148,27 +197,11 @@ As a user I can access the about us page, contact us page, listings page and ter
 #Project plan and timeline
 
 #Screenshots of trello board
+
+
+
+
 #---------------------#
 #Answers to the 23 questions
 
 
-Things you may want to cover:
-
-* Ruby version: 2.6.0
-* System dependencies: 
-Gems: Devise, Postgrsql, Bootstrap, jquery, javascript
-
-* Configuration
-
-* Database creation : Postgresql for development, testing and production. Was created on 30/04/2019
-
-* Database initialization
-
-* How to run the test suite: rails test
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions: fork copy ssh address
-to deploy to heroku : heroku login, heroku create, git push heroku master, run heroku rails db:migrate
-
-* ...
