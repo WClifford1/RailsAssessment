@@ -93,11 +93,16 @@ View the website's contact us, about us and terms and conditions pages.
 [url=https://ibb.co/TYPMjTP][img]https://i.ibb.co/9cyHKvy/Screen-Shot-2019-05-12-at-5-05-32-pm.png[/img][/url]
 [url=https://imgbb.com/][img]https://i.ibb.co/BjvPX48/Screen-Shot-2019-05-12-at-5-06-02-pm.png[/img][/url]
 [url=https://ibb.co/bB6XxLM][img]https://i.ibb.co/XsWt9pr/Screen-Shot-2019-05-12-at-5-07-13-pm.png[/img][/url]
+[url=https://ibb.co/kqqj6PZ][img]https://i.ibb.co/TPP6qNy/Screen-Shot-2019-05-12-at-8-05-43-pm.png[/img][/url]
+[url=https://ibb.co/C5DjjZj][img]https://i.ibb.co/zhD33Y3/Screen-Shot-2019-05-12-at-8-05-25-pm.png[/img][/url]
+[url=https://ibb.co/vX29Sk3][img]https://i.ibb.co/8YFkH9r/Screen-Shot-2019-05-12-at-8-05-10-pm.png[/img][/url]
 
 #Tech stack
 Ruby 2.6.0
 Rails 5.2.3
 PostgreSQL
+HTML
+CSS
 
 #Instructions on how to setup the application
 Deployment instructions: fork copy or git clone ssh address
