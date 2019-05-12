@@ -200,8 +200,23 @@ As a user I can access the about us page, contact us page, listings page and ter
 #Project plan and timeline
 
 #Screenshots of trello board
+
+[url=https://ibb.co/kSsmX8K][img]https://i.ibb.co/YLF0hk2/Screen-Shot-2019-05-12-at-5-24-36-pm.png[/img][/url]
+[url=https://ibb.co/61yHb8q][img]https://i.ibb.co/X3W7pDG/Screen-Shot-2019-05-12-at-5-25-32-pm.png[/img][/url]
+[url=https://ibb.co/V9wc8CB][img]https://i.ibb.co/xLFtQg5/Screen-Shot-2019-05-12-at-5-25-55-pm.png[/img][/url]
+[url=https://ibb.co/r4TznFZ][img]https://i.ibb.co/18hPH79/Screen-Shot-2019-05-12-at-5-26-05-pm.png[/img][/url]
 #---------------------#
 #Answers to the 23 questions
+
+5. Identify and describe the software to be used in your App.
+
+Software being used in this app consists of Stripe which is a third party payment platform. 
+Cloudinary: cloudinary is an end-to-end image management solution for websites and mobile app. Cloudinary covers pretty much everything from uploading images, storage of images, manipulations and optimisation. We integrated cloudinary into our app by using a file_field and saving the image to cloudinary servers by having stored our API and Secret API Key. We implemented the service into our database.yml and storage.yml files.
+Stripe: an online payment processor for internet businesses. Stripe is a suite of payment APIs that powers commerce for online businesses of all sizes. How we implemented stripe is by use of a gateway between the checkout and stripe. We had to implement code into the controller based on the documentation found on the stripe official website. The code found on the checkout runs a javascript file which creates a form then send it to stripe.
+Bundler:  Is an installation of all required gems and files for your rails application to run
+Postgresql/pgadmin: a powerful, open source object-relational database system that uses and extends the SQL language combined with many features. We’ve implemented postgresql into our Rails app upon generation of our app which transformed the migration tables into a postgresql database as well as having models based upon it.
+Visual Studio Code:  a text-editor created by Microsoft which supports many programming languages. We used VScode to build and code our app in the Ruby on Rails language.
+
 
 6. Identify the database to be used in your App and provide a justification for your choice
 
@@ -222,6 +237,10 @@ As a user I can access the about us page, contact us page, listings page and ter
     Models, Controllers, Views. 
     The architecture of our app is based off the formulation and relation of the models, controllers, and views of our application. Essentially each element is supporting the next in emulating a full scale working application. The models are used to control the back end structure of the website in hosting databases, authentication actions and authorization methods. The views delivers the rendered pages users actually see when they visit our application. In order to link the backend and front end together, we use controllers to organize what information to call from the model and send to the views. All of these components working in unison deliver the architecture of our application. 
 
+  9.  Explain the different high-level components (abstractions) in your App.
+
+  In the Rails we use high-level components such as MVC(model,view,controller). Our models are the interface between the database. The rails server is an executable that instantiates a web server. It listens on a IP(internet protocol) and a port while we are developing the app.  The rails server starts on the local machine and listens for requests on port:3000 so it can access it using the web address http://0.0.0.0:3000. The routes comprise of code that tells the app what requests are or should be used. The controllers comprise of actions that handle the requests with the help of actions. The views are responsible for the html or markup which is being sent back to the browser, however the views rely on the data being prepared by the controller.
+
 
 10. Detail any third party services that your App will use
     A list of third party services along with a detailed description of its integration into our application has been listed below: 
@@ -234,6 +253,23 @@ As a user I can access the about us page, contact us page, listings page and ter
     GitHub – We used Github to provide access control and exercise use of collaboration features such as bug tracking, feature requests, task management, and readme for our project. In addition, we’re able to backtrack on coding structures if our coding document invokes errors. 
     Cloudinary – A third party service used to manage an application's image and video-related needs all in the cloud. It offers a wide range of media management tools used by numerous web and mobile app developers worldwide. The solution supports image uploads, manipulations, and optimization for the web, cloud storage, and delivery.
     Heroku – Heroku is a container-based cloud Platform as a Service (PaaS). We’ve used Heroku to deploy and manage our application. We’ve decided to use Heroku because it is fully managed, allowing us the freedom to focus on the application without the distraction of maintaining servers,hardware, or infrastructure. 
+
+    11. Describe (in general terms) the data structure of marketplace apps that are similar to your own        (e.g. eBay, Airbnb).
+    The data structure of our application replicates that of Ebay in delivering a marketplace for users to list as well as purchase products. Differentiation occurs in the enforcement of a technological hub where users can buy and sell used gadgets.
+
+   12.  Discuss the database relations to be implemented.
+
+        We have quite a few tables so they go as follows:
+Users  -> Has many listings (one to many)
+The reason Users has many listings is because we want them to be able to create more than just one we want them to be able to create many. 
+Cart -> Has many order(one to many)
+Carts has many orders because we want users to be able to add more than 1 item to the cart
+Order -> Belongs to user(one to many)
+Orders belongs to users as a one to many relation because a user can create multiple orders
+Listing -> Belongs to user, Has many attachments (one to many)
+Listings belongs to users as a one to many as well as has many attachments because we want the user to be able to create many listings as well as be able to have many attachments per listing
+Roles -> has and belongs to many users (one to one and many to many)
+	This was implemented through the rolify gem but one user can have many roles.
 
 
 13. Describe your project’s models in terms of the relationships (active record associations) they         have with each other
@@ -248,9 +284,99 @@ As a user I can access the about us page, contact us page, listings page and ter
 
     User model - created with the devise gem which allows users to sign up, sign in, sign out, edit or delete their account. Has many listings.
 
+    14. Provide your database schema design.
+    enable_extension "plpgsql"
 
-11. Describe (in general terms) the data structure of marketplace apps that are similar to your own        (e.g. eBay, Airbnb).
-    The data structure of our application replicates that of Ebay in delivering a marketplace for users to list as well as purchase products. Differentiation occurs in the enforcement of a technological hub where users can buy and sell used gadgets.
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.string "title"
+    t.decimal "price"
+    t.string "description"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_listings_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "listing_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "cart_id"
+    t.integer "quantity", default: 1
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
+    t.index ["listing_id"], name: "index_orders_on_listing_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+    t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "name"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "users_roles", id: false, force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "role_id"
+    t.index ["role_id"], name: "index_users_roles_on_role_id"
+    t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
+    t.index ["user_id"], name: "index_users_roles_on_user_id"
+  end
+
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "listings", "users"
+  add_foreign_key "orders", "carts"
+  add_foreign_key "orders", "listings"
+end
+
 
 
 18. Discuss how Agile methodology is being implemented in your project
@@ -276,6 +402,26 @@ As a user I can access the about us page, contact us page, listings page and ter
 
 22. Discuss methods you will use to protect information and data.
     In order to secure our clients personal data and information, we’ve integrated methods of authorization and authentication into our application. The ‘Devise’ gem has allowed us to achieve this safety measure with ease. As users visit our application, they’ll be met with a login page in order to view any products that have been uploaded on our application. This is the authentication side of things, and users will first need to be registered with our servers. Registration requires a username, valid email, and a valid password. Upon login, both the user email and password must match in order to successfully authenticate the user. Upon entry, a user is able to view, edit and delete their listing but unable to edit or delete other users listings. This is known as authorization which we will use to manage the permissions of each user.
+
+23.    Research what your legal obligations are in relation to handling user data.
+
+Some of the legal obligations we are required to cover under the privacy act are 
+Must implement practices, procedures and systems to ensure compliance with the APP’s  and to handle complaints.
+Must make available an up-to-date and clear privacy policy, setting out certain information on how you will manage personal information.
+Must take reasonable steps to protect the personal information collected or held.
+Must give individuals access to their personal information upon request
+Must have correct personal information where we become aware it is either inaccurate, incomplete, out of date, irrelevant, misleading or where requested by the individual
+Can only collect personal information if it is necessary for the function or activity of the business
+Should not use or disclose personal information for a purpose different from the original purpose of collection, except in limited circumstances
+Must not use or disclose personal information for a direct marketing purpose, except in a limited circumstance
+Some of the legal obligations in the EU are 
+Privacy policies will have to be written in a clear, straightforward language
+The user will need to give an affirmative consent before his/her data can be used by a business. Silent is not consent
+Will need to clearly inform the user about transferring data
+Will have to inform users without delay in case of a harmful data breach
+The user will have the option to move his/her data 
+The european data protection board grouping all 28 data protection authorities, will have the powers to provide guidance and interpretation and adopt binding decisions in case several EU countries are concerned by the same case.
+
 
 
 
