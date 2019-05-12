@@ -70,6 +70,7 @@ https://github.com/WClifford1/RailsAssessment
 #Problem definition/Purpose
 The problem we came up with is that people have unused electronics that they want to get rid of and want to sell them at a centralised marketplace.
 
+
 #Functionality/Features
 User have the ability to:
 Create, edit, delete, log-in and log-out of their accounts using their email, username and password.
@@ -79,13 +80,30 @@ Make payment using credit card via Stripe.
 Create, edit and delete their own listings for items that they want to sell.
 View the website's contact us, about us and terms and conditions pages.
 
+
 #Screenshots
+[url=https://ibb.co/ZVC9LgK][img]https://i.ibb.co/bPntWvL/Screen-Shot-2019-05-12-at-4-56-10-pm.png[/img][/url]
+[url=https://ibb.co/cg0jstL][img]https://i.ibb.co/w0Vf2Cs/Screen-Shot-2019-05-12-at-4-56-40-pm.png[/img][/url]
+[url=https://ibb.co/sCMyWBP][img]https://i.ibb.co/qCPkJZn/Screen-Shot-2019-05-12-at-4-57-29-pm.png[/img][/url]
+[url=https://ibb.co/mT13Nbj][img]https://i.ibb.co/W5qLVGh/Screen-Shot-2019-05-12-at-4-58-00-pm.png[/img][/url]
+[url=https://ibb.co/X2zbVFp][img]https://i.ibb.co/h7KyC2H/Screen-Shot-2019-05-12-at-4-58-13-pm.png[/img][/url]
+[url=https://ibb.co/bNXdXQ2][img]https://i.ibb.co/XFtJtj3/Screen-Shot-2019-05-12-at-5-01-27-pm.png[/img][/url]
+[url=https://ibb.co/XY1wKH6][img]https://i.ibb.co/mNkx2pd/Screen-Shot-2019-05-12-at-4-59-33-pm.png[/img][/url]
+[url=https://ibb.co/MPHcQGb][img]https://i.ibb.co/SVgtGd2/Screen-Shot-2019-05-12-at-5-04-00-pm.png[/img][/url]
+[url=https://ibb.co/w6g7dJx][img]https://i.ibb.co/XJLDWyv/Screen-Shot-2019-05-12-at-5-04-20-pm.png[/img][/url]
+[url=https://ibb.co/bNXdXQ2][img]https://i.ibb.co/XFtJtj3/Screen-Shot-2019-05-12-at-5-01-27-pm.png[/img][/url]
+[url=https://ibb.co/TYPMjTP][img]https://i.ibb.co/9cyHKvy/Screen-Shot-2019-05-12-at-5-05-32-pm.png[/img][/url]
+[url=https://imgbb.com/][img]https://i.ibb.co/BjvPX48/Screen-Shot-2019-05-12-at-5-06-02-pm.png[/img][/url]
+[url=https://ibb.co/bB6XxLM][img]https://i.ibb.co/XsWt9pr/Screen-Shot-2019-05-12-at-5-07-13-pm.png[/img][/url]
+
 
 
 #Tech stack
 Ruby 2.6.0
 Rails 5.2.3
 PostgreSQL
+
+
 
 #Instructions on how to setup the application
 Deployment instructions: fork copy or git clone ssh address
@@ -107,6 +125,7 @@ To deploy to heroku:
 Ensure your heroku dashboard has been set up with the correct values for your cloudinary and stripe keys, as found in the values you entered in your .env file.
 
 In terminal run: heroku login, heroku create, git push heroku master, heroku run rails db:migrate
+
 
 
 #Design documentation
@@ -135,13 +154,46 @@ As a user of the app I can easily access the landing page, listings page, edit p
 As a user I can access the about us page, contact us page, listings page and terms and conditions page from the landing page.
 
 #Workflow Diagram of user journey/s
-
+[url=https://ibb.co/CBHTzNP][img]https://i.ibb.co/fMxP2BD/Screen-Shot-2019-05-12-at-5-18-18-pm.png[/img][/url]
 
 #Wireframes
+#Desktop Wireframes
+[url=https://ibb.co/WKzn7Bk][img]https://i.ibb.co/ysk0Kg6/Cart-Menu-Page.jpg[/img][/url]
+[url=https://ibb.co/VM8YFRS][img]https://i.ibb.co/zPwV3pR/Edit-Profile-Page.jpg[/img][/url]
+[url=https://ibb.co/pZmBqfS][img]https://i.ibb.co/ctmSq6j/Landing-Page-2.jpg[/img][/url]
+[url=https://ibb.co/64WGcq8][img]https://i.ibb.co/vJjfCMh/Landing-Page-1.jpg[/img][/url]
+[url=https://ibb.co/sC5Vdqb][img]https://i.ibb.co/VxHqcTJ/Listings-Page.jpg[/img][/url]
+[url=https://ibb.co/Z2P6NM3][img]https://i.ibb.co/z6YhN41/Order-Success-Page.jpg[/img][/url]
+[url=https://ibb.co/bLdSPzV][img]https://i.ibb.co/Cv0kzhy/Sell-Page.jpg[/img][/url]
+[url=https://ibb.co/6PgRptd][img]https://i.ibb.co/cFDcp8m/Sign-In-Page.jpg[/img][/url]
+[url=https://ibb.co/ZGt443G][img]https://i.ibb.co/17hyy37/Sign-Up-Page.jpg[/img][/url]
 
+#mobile phone wireframes
+[url=https://imgbb.com/][img]https://i.ibb.co/LvGJ2Mq/Cart-Menu.jpg[/img][/url]
+[url=https://ibb.co/w6k5ksG][img]https://i.ibb.co/pX7Y7yV/Landing-Page-1.jpg[/img][/url]
+[url=https://ibb.co/YLVQ67B][img]https://i.ibb.co/2kphw73/Landing-Page-2.jpg[/img][/url]
+[url=https://imgbb.com/][img]https://i.ibb.co/0CFfGJt/Listings-Page.jpg[/img][/url]
+[url=https://ibb.co/fGKB5P0][img]https://i.ibb.co/93fzLCY/Log-In-Page.jpg[/img][/url]
+[url=https://ibb.co/7k5kMqT][img]https://i.ibb.co/Sf8fYz1/Order-Success-Page.jpg[/img][/url]
+[url=https://ibb.co/dJ1GttZ][img]https://i.ibb.co/Dgs5YYd/Sell-Page-1.jpg[/img][/url]
+[url=https://ibb.co/G2VC292][img]https://i.ibb.co/swFswCw/Sell-Page-2.jpg[/img][/url]
+[url=https://ibb.co/WWzzQhJ][img]https://i.ibb.co/pvKKg7F/Sign-Up-Page.jpg[/img][/url]
+
+#Tablet wireframes
+[url=https://ibb.co/zG4Yt7c][img]https://i.ibb.co/FgDMd0v/Cart-Menu.jpg[/img][/url]
+[url=https://ibb.co/2SsWmZH][img]https://i.ibb.co/KDLbRKS/Edit-Profile.jpg[/img][/url]
+[url=https://ibb.co/pZmBqfS][img]https://i.ibb.co/ctmSq6j/Landing-Page-2.jpg[/img][/url]
+[url=https://ibb.co/w6k5ksG][img]https://i.ibb.co/pX7Y7yV/Landing-Page-1.jpg[/img][/url]
+[url=https://ibb.co/nR7d511][img]https://i.ibb.co/PtcXfWW/Listings-Page.jpg[/img][/url]
+[url=https://ibb.co/fGKB5P0][img]https://i.ibb.co/93fzLCY/Log-In-Page.jpg[/img][/url]
+[url=https://ibb.co/7k5kMqT][img]https://i.ibb.co/Sf8fYz1/Order-Success-Page.jpg[/img][/url]
+[url=https://ibb.co/dJ1GttZ][img]https://i.ibb.co/Dgs5YYd/Sell-Page-1.jpg[/img][/url]
+[url=https://ibb.co/G2VC292][img]https://i.ibb.co/swFswCw/Sell-Page-2.jpg[/img][/url]
+[url=https://ibb.co/WWzzQhJ][img]https://i.ibb.co/pvKKg7F/Sign-Up-Page.jpg[/img][/url]
 
 #Database entity relationship diagram
-#---------------------#
+[url=https://ibb.co/9Z5X0Rg][img]https://i.ibb.co/qJQG8bj/Screen-Shot-2019-05-09-at-3-55-11-pm.png[/img][/url]
+
 
 #Details of planning process
 
@@ -150,6 +202,83 @@ As a user I can access the about us page, contact us page, listings page and ter
 #Screenshots of trello board
 #---------------------#
 #Answers to the 23 questions
+
+6. Identify the database to be used in your App and provide a justification for your choice
+
+    We chose to use PosterSQL as our database for multiple reasons.
+
+    PostgreSQL is an open source database, so we would have access to the full version and there would be no issues concerning licensing. PostgreSQL is a community driven open source database which is backed by different companies, which means it is highly unlikely that it will be bought out by a single company, therefore PostgreSQL should be safe to use in the future.
+
+    PostgreSQL’s functionality and performance far exceeds the requirements of our assessment project and it supports all the datatypes that we will require.
+
+
+7. Identify and describe the production database setup (I.e. Postgres instance)
+
+    Ensure when creating the app in the terminal use “rails new “appname” —database=postgresql”
+    To make Postgresql the default database for development and production. In database.yml add the username, port and host lines with their respective values. Add password: <%= ENV['DB_PASSWORD'] %> and then in the .env file add DB_PASSWORD=“Your password”. In the terminal run “rails g migration “table name” “field names” to create a migration file to add tables and fields to the database. Run the migration files with in the terminal with “rails db:migrate”.
+
+
+8. Describe the architecture of your App.
+    Models, Controllers, Views. 
+    The architecture of our app is based off the formulation and relation of the models, controllers, and views of our application. Essentially each element is supporting the next in emulating a full scale working application. The models are used to control the back end structure of the website in hosting databases, authentication actions and authorization methods. The views delivers the rendered pages users actually see when they visit our application. In order to link the backend and front end together, we use controllers to organize what information to call from the model and send to the views. All of these components working in unison deliver the architecture of our application. 
+
+
+10. Detail any third party services that your App will use
+    A list of third party services along with a detailed description of its integration into our application has been listed below: 
+    Stripe – A third party service enabled to allow users to make and receive over the internet. We’ve decided to use this service above others because all sensitive data  completely bypasses our application and goes directly to Stripe, then Stripe simple give the user a unique token which relates to the transaction.
+    Postgres – In order to manage the database of users detailing profile data and personal information, we’ve decided to use Postgres. We’ve decided to use Postgres as it enlists many benefits as listed below:
+    Allows multiple network types, 
+    able to store multiple arrays due to its object relation database
+    Supports every data type (uuid, monetary, enumerated, geometric, binary, network address, bit string, text search, xml, json, array, composite and range types, as well as some internal types for object identification and log location)
+    PostgreSQL isn't just relational, it's object-relational. A fundamental characteristic of an object-relational database is support for user-defined objects and their behaviors including data types, functions, operators, domains and indexes. This makes PostgreSQL extremely flexible and robust. Among other things, complex data structures can be created, stored and retrieved.
+    GitHub – We used Github to provide access control and exercise use of collaboration features such as bug tracking, feature requests, task management, and readme for our project. In addition, we’re able to backtrack on coding structures if our coding document invokes errors. 
+    Cloudinary – A third party service used to manage an application's image and video-related needs all in the cloud. It offers a wide range of media management tools used by numerous web and mobile app developers worldwide. The solution supports image uploads, manipulations, and optimization for the web, cloud storage, and delivery.
+    Heroku – Heroku is a container-based cloud Platform as a Service (PaaS). We’ve used Heroku to deploy and manage our application. We’ve decided to use Heroku because it is fully managed, allowing us the freedom to focus on the application without the distraction of maintaining servers,hardware, or infrastructure. 
+
+
+13. Describe your project’s models in terms of the relationships (active record associations) they         have with each other
+
+    Listing model - Controls the items that can be bought and sold. Belongs to the user mode in a one to many relationship, so that one user can have many listings, while each listing can only belong to one user. The listing model has a “can_update?(user)” method which allows only the user which the listing belongs to be able to edit or delete the listing. The listing model also has a has_many relationship with the order model, which is used to place listings into the user’s shopping cart.
+
+    Cart model - Has many orders. The order model is used to place items from the listing model to the cart model.
+
+    Order model - belongs to the listing model and belongs to the cart model. Used to place listings into the carts table.
+
+    Role model - belongs to the users table. Is used to set permissions for users, namely that the user can only edit or delete listings that belong to them.
+
+    User model - created with the devise gem which allows users to sign up, sign in, sign out, edit or delete their account. Has many listings.
+
+
+11. Describe (in general terms) the data structure of marketplace apps that are similar to your own        (e.g. eBay, Airbnb).
+    The data structure of our application replicates that of Ebay in delivering a marketplace for users to list as well as purchase products. Differentiation occurs in the enforcement of a technological hub where users can buy and sell used gadgets.
+
+
+18. Discuss how Agile methodology is being implemented in your project
+
+    Our team decided to begin by producing a minimal viable product first, and then start adding additional features. This meant that we had a functional application which we could present to a client, which could then be customised by the client. The minimal viable product of our project was a simple working version of the marketplace, which was completed at the end of the first week of the timeframe. We then upgraded the minimal viable product by adding a shopping cart system, landing page, receipt page, navigation bar and other styling changes. 
+
+    At the end of each day as a whole team we reviewed the state of the current product, what features we wanted to add or change, and allocate each member’s tasks the next day to achieve our plan.
+
+
+19. Provide an overview and description of your Source control process
+
+    For our source control we used github. We created a main repository on one member’s GitHub account and added the other members as contributors. Each member would create their own branch for the features that they were working on that day. Once each feature was complete it was pushed and merged to the master branch. This process worked well, as we were able to work on seperate features without affected other areas of the code. 
+
+
+20. Provide an overview and description of your Testing process
+
+    We used rails in-built testing for each feature that was added, after it was added. We would also test the production version by making frequent pushes to Heroku. We did not use test-driven development by writing tests before writing the code. Using a test-driven development process could have provided benefits of having a clearer direction of what to work on and made the code more resilient to change, therefore after reviewing our development process we feel as though test-driven development would be beneficial to use in future projects. 
+
+
+21. Discuss and analyse requirements related to information system security.
+    The requirements related to information system security enforces the discretion of payment information as well as user confidentiality. In order to securely intake payment information, we will be redirecting payment methods through stripe. We chose Stripe because it is PCI Level I encrypted so all of the transactions are protected from a potential data breach. In addition, user confidentiality is our guarantee with password information to be hashed rendering potential breaches unable to take or manipulate profile information.
+
+
+22. Discuss methods you will use to protect information and data.
+    In order to secure our clients personal data and information, we’ve integrated methods of authorization and authentication into our application. The ‘Devise’ gem has allowed us to achieve this safety measure with ease. As users visit our application, they’ll be met with a login page in order to view any products that have been uploaded on our application. This is the authentication side of things, and users will first need to be registered with our servers. Registration requires a username, valid email, and a valid password. Upon login, both the user email and password must match in order to successfully authenticate the user. Upon entry, a user is able to view, edit and delete their listing but unable to edit or delete other users listings. This is known as authorization which we will use to manage the permissions of each user.
+
+
+
 
 
 Things you may want to cover:
