@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tekmore</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body class="<%= yield (:body_class) %>">
+    <% if flash[:notice] %>
+      <div class="notification is-success global-notification">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+    <div class="notification is-danger global-notification">
+      <p class="alert"><%= alert %></p>
+    </div>
+    <% end %>
+     <nav class="navbar is-white pt2 pb2" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand is-active">
+        <%= link_to listings_path, class:"navbar-item" do %>
+          <h1 class="title is-5 pl4">TEKMOR</h1>
+        <% end  %>
+      <div class="navbar-burger" data-target="navbar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+      <div id="navbar" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+          
+            <div class="field is-grouped">
+            <% if total_cart_items %>
+              <%= link_to cart_path(@cart), class:"navbar-item button pl4 pr4", style: "margin-right: 1em" do %>
+              <span class="icon is-small">
+                <i class="fa fa-shopping-cart"></i>
+              </span>
+              <span>Cart
+                <%= cart_count_over_one %>
+                </span>
+              <% end %>
+            <% end %>
+            <%# The navigation bar has a drop down user menu if the user is logged in %>
+            <% if user_signed_in? %>
+              <%= link_to 'Sell', new_listing_path, class: "navbar-item button is-info pl5 pr5" %>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <%= link_to 'Menu', edit_user_registration_path, class: "navbar-link pl5 pr5" %>
+                <div class="navbar-dropdown is-right">
+                  <p class="navbar-item has-text-weight-semibold has-text-primary">Username: <%= current_user.username.capitalize %></p>
+                  <%= link_to "Home", root_path, class:"navbar-item" %>
+                  <%= link_to "Browse Tek", listings_path, class:"navbar-item" %>
+
+                  <%= link_to "Edit Profile", edit_user_registration_path, class:"navbar-item" %>
+                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                </div>
+              </div>
+            <% else %>
+            <div class="columns">
+            <div class="column">
+            <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-info pr5 pl5" %>
+            </div>
+            <div class="column">
+            <%= link_to "Sign Up", new_user_registration_path, class:"navbar-item button is-primary pr5 pl5"%>
+            </div>
+            <% end %>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </nav>
+  <%= yield(:header) %>
+  <div class="container">
+    <%= yield %>
+  </div>
+  </body>
+</html>

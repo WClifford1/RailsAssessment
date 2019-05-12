@@ -1,0 +1,40 @@
+// Place all the styles related to the Listing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// .list-button {
+//     display: flex;
+//     justify-content: flex-end;
+// }
+
+// .title {
+//     display: flex;
+//     justify-content: center;
+//     margin: 20px;
+//     // border: black 2px dotted;
+// }
+
+// #listings {
+//     display: flex;
+//     justify-content: center;
+//     margin: 20px;
+// }
+// // table {
+// //     border: 1px solid black;
+// // }
+
+.listing-show {
+  .feature-image img {
+    width: 100%;
+  }
+
+  .add-to-cart {
+    width: 100%;
+  }
+}
+
+.product {
+  display: flex;
+
+}

@@ -1,0 +1,29 @@
+<div class="title has-text-centered is-1"><h1>Welcome</h1></div>
+<p class="content has-text-centered">Sign into your account</p>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+<%# Removed the username field because it was conflicting with devise %>
+  <div class="field">
+    <%= f.label :email, class: "label" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, class: "label" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "input" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in", class: "button is-info is-fullwidth is-size-5" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

@@ -1,0 +1,18 @@
+<h1 class="title has-text-centered"> Let's edit your tek!</h1><br />
+
+<div class="pv4">
+    <%= render 'form', listing: @listing %>
+</div>
+
+<%# When editing an image the form will display which will allow the user to change each field %>
+<%# The fields will auto populate so that the user can see what is currently in each field %>
+<%# All of the attached images for the listing will display at the bottom of the page %>
+
+<% if listing_author(@listing) %>
+<% if @listing.image.attached? %>
+<% for img in @listing.image %>
+        <%= image_tag img, width: 400 %>
+      <% end %>
+      
+<% end %>
+<% end %>
