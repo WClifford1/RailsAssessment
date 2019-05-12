@@ -25,8 +25,9 @@
 <div class="columns round pb5">
 <div class="column circle">
                             <figure class="image is-128x128">
-  <img class="is-rounded" src="http://chittagongit.com/download/69785">
-  <p class="content has-text-centered pt3 has-text-weight-semibold is-size-4"><%= link_to "Contact Us", home_contactus_path %></p></p>
+  
+  <%= link_to image_tag("http://chittagongit.com/download/69785", class: "is-rounded"), home_contactus_path %>
+<p class="content has-text-centered pt3 has-text-weight-semibold is-size-4"><%= link_to "Contact", home_contactus_path %></p>
 </figure>
 </div>
 
