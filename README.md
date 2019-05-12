@@ -64,11 +64,10 @@ https://glacial-castle-71209.herokuapp.com/
 https://github.com/WClifford1/RailsAssessment
 
 #Description
-
+The app is a two-sided marketplace, the user is able to log-in and out, view listings, create their own listing or purchase a listing.
 
 #Problem definition/Purpose
 The problem we came up with is that people have unused electronics that they want to get rid of and want to sell them at a centralised marketplace.
-
 
 #Functionality/Features
 User have the ability to:
@@ -95,12 +94,10 @@ View the website's contact us, about us and terms and conditions pages.
 [url=https://imgbb.com/][img]https://i.ibb.co/BjvPX48/Screen-Shot-2019-05-12-at-5-06-02-pm.png[/img][/url]
 [url=https://ibb.co/bB6XxLM][img]https://i.ibb.co/XsWt9pr/Screen-Shot-2019-05-12-at-5-07-13-pm.png[/img][/url]
 
-
 #Tech stack
 Ruby 2.6.0
 Rails 5.2.3
 PostgreSQL
-
 
 #Instructions on how to setup the application
 Deployment instructions: fork copy or git clone ssh address
@@ -124,7 +121,6 @@ To deploy to heroku:
 Ensure your heroku dashboard has been set up with the correct values for your cloudinary and stripe keys, as found in the values you entered in your .env file.
 
 In terminal run: heroku login, heroku create, git push heroku master, heroku run rails db:migrate
-
 
 #Design documentation
 
@@ -199,6 +195,8 @@ As a user I can access the about us page, contact us page, listings page and ter
 
 #Details of planning process
 
+Our planning started by deciding what type of app we wanted to build. Once we had settled on an online electronic marketplace, we wrote down on a whiteboard a list of the features we wanted. We seperated the features into those which would be used to create a minimal viable product and those which we would add after the MVP had been created. We allocated seperate tasks to each member. Throughout the process we would check how the app was coming along, decide what we wanted to do the next day, and allocate tasks to each member. We tracked tasks through Trello, and added our individual work through github branches.
+
 
 #Project plan and timeline
 [url=https://imgbb.com/][img]https://i.ibb.co/xGBjc8W/Screen-Shot-2019-05-12-at-5-19-45-pm.png[/img][/url]
@@ -212,6 +210,8 @@ For the coding process we tried to get at least 1-2 features complete per day. A
 [url=https://ibb.co/61yHb8q][img]https://i.ibb.co/X3W7pDG/Screen-Shot-2019-05-12-at-5-25-32-pm.png[/img][/url]
 [url=https://ibb.co/V9wc8CB][img]https://i.ibb.co/xLFtQg5/Screen-Shot-2019-05-12-at-5-25-55-pm.png[/img][/url]
 [url=https://ibb.co/r4TznFZ][img]https://i.ibb.co/18hPH79/Screen-Shot-2019-05-12-at-5-26-05-pm.png[/img][/url]
+
+
 #---------------------#
 
 
@@ -475,7 +475,7 @@ end
 
 17. Describe the way tasks are allocated and tracked in your project
 
-  During the planning process we decided on each feature that we wanted to include. We then allocated each member a feature or features to work on. After the mimimal viable product was complete we then did the same process for additional features. Throughout the process, at the end of each day we assess what the current build of the product was like, and decide on what tasks would be done by each member the next day.
+  During the planning process we decided on each feature that we wanted to include. We then allocated each member a feature or features to work on. After the mimimal viable product was complete we then did the same process for additional features. Throughout the process, at the end of each day we assess what the current build of the product was like, and decide on what tasks would be done by each member the next day. We tracked tasks through Trello.
 
 
 18. Discuss how Agile methodology is being implemented in your project
