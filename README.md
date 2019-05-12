@@ -198,6 +198,9 @@ As a user I can access the about us page, contact us page, listings page and ter
 #Details of planning process
 
 #Project plan and timeline
+[url=https://imgbb.com/][img]https://i.ibb.co/xGBjc8W/Screen-Shot-2019-05-12-at-5-19-45-pm.png[/img][/url]
+For the planning process we dedicated 2-3 days for brainstorming as well as the planning process of the ERD.
+For the coding process we tried to get at least 1-2 features complete per day. As for the documentation that was used for the remaining days
 
 #Screenshots of trello board
 
