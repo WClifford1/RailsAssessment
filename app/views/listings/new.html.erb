@@ -1,9 +1,0 @@
-<%# When creating a listing the listing form will be generated for the user to fill in %>
-<%# The top of the page will prompt the user what to do and will prompt them by using their username %>
-
-<h1 class="title has-text-centered">Hi <%= @current_user.username.capitalize %>. Let's sell your tek!</h1><br />
-
-<div class="pv4">
-<%= render 'form', listing: @listing %>
-</div>
-
