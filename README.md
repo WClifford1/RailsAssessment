@@ -520,16 +520,3 @@ end
   Will have to inform users without delay in case of a harmful data breach
   The user will have the option to move his/her data 
   The european data protection board grouping all 28 data protection authorities, will have the powers to provide guidance and interpretation and adopt binding decisions in case several EU countries are concerned by the same case.
-
-
-
-
-
-
-
-
-
-#---------------------#
-#Answers to the 23 questions
-
-
